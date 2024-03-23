@@ -10,5 +10,22 @@
       "language": "C#",
       "type": "solution"
     },
-    "preferNameDirectory": true
+    "preferNameDirectory": true,
+    "symbols": {
+      "namespaceRoot": {
+        "type": "parameter",
+        "datatype": "string",
+        "description": "The root namespace for the project.",
+        "defaultValue": "false"
+      }
+    },
+    "sources": [
+      {
+        "modifiers": [
+          {
+            "exclude": [ "src/.vs/**", ".template_config/**" ]
+          }
+        ]
+      }
+    ]
   }
