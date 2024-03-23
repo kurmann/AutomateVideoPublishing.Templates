@@ -1,31 +1,40 @@
 {
-    "$schema": "http://json.schemastore.org/template",
-    "author": "Patrick Kurmann",
-    "classifications": [ "Common", "ServiceCollection" ],
-    "identity": "Kurmann.AutomateVideoPublishing.SciTemplate",
-    "name": "Service Collection Integrated Module Template",
-    "shortName": "scimodule",
-    "sourceName": "ServiceCollectionIntegratedModule",
-    "tags": {
-      "language": "C#",
-      "type": "solution"
-    },
-    "preferNameDirectory": true,
-    "symbols": {
-      "namespaceRoot": {
-        "type": "parameter",
-        "datatype": "string",
-        "description": "The root namespace for the project.",
-        "defaultValue": "false"
-      }
-    },
-    "sources": [
-      {
-        "modifiers": [
-          {
-            "exclude": [ "src/.vs/**", ".template_config/**" ]
-          }
-        ]
-      }
-    ]
-  }
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Patrick Kurmann",
+  "classifications": [
+    "Common",
+    "ServiceCollection"
+  ],
+  "identity": "Kurmann.AutomateVideoPublishing.SciTemplate",
+  "name": "Service Collection Integrated Module Template",
+  "shortName": "scimodule",
+  "sourceName": "ServiceCollectionIntegratedModule",
+  "tags": {
+    "language": "C#",
+    "type": "solution"
+  },
+  "preferNameDirectory": true,
+  "symbols": {
+    "namespaceRoot": {
+      "type": "parameter",
+      "datatype": "string",
+      "description": "The root namespace for the project.",
+      "defaultValue": "false"
+    }
+  },
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "exclude": [
+            "src/.vs/**",
+            ".template_config/**",
+            "src/**/bin/**",
+            "src/**/obj/**",
+            ".git/**"
+          ]
+        }
+      ]
+    }
+  ]
+}
