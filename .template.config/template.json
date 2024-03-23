@@ -5,8 +5,8 @@
     "Common",
     "ServiceCollection"
   ],
-  "identity": "Kurmann.AutomateVideoPublishing.SciTemplate",
-  "name": "Service Collection Integrated Module Template",
+  "identity": "Kurmann.ServiceCollectionIntegratedModule",
+  "name": "Service Collection Integrated Module",
   "shortName": "scimodule",
   "sourceName": "ServiceCollectionIntegratedModule",
   "tags": {
