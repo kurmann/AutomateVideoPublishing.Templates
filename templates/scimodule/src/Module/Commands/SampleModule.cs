@@ -3,7 +3,7 @@ using ServiceCollectionIntegratedModule.Entities;
 
 namespace ServiceCollectionIntegratedModule.Module.Commands;
 
-public class SampleCommand(string? sampleParameter)
+public class SampleCommand(string? sampleParameter) : ICommand<SampleEntity>
 {
     private readonly string? sampleParameter = sampleParameter;
 

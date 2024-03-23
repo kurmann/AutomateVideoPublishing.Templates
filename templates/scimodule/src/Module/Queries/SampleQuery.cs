@@ -3,7 +3,7 @@ using ServiceCollectionIntegratedModule.Entities;
 
 namespace ServiceCollectionIntegratedModule.Module.Queries;
 
-public class SampleQuery(string? sampleParameter)
+public class SampleQuery(string? sampleParameter) : IQueryService<SampleEntity>
 {
     private readonly string? sampleParameter = sampleParameter;
 
