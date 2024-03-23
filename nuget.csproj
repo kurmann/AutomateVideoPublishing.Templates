@@ -14,6 +14,13 @@
     <IncludeContentInPackage>true</IncludeContentInPackage>
     <IncludeBuildOutput>false</IncludeBuildOutput>
     <ContentTargetFolders>content</ContentTargetFolders>
+
+    <!-- Templates enthalten in der Regel keine lib oder ref Ordner, da sie keine ausführbaren Codes oder Bibliotheken 
+    liefern, sondern eher eine Sammlung von Dateien und Ordnern, die als Ausgangspunkt für neue Projekte dienen. 
+    Deshalb kann die Warnung NU5128 ignoriert werden, solange das Template korrekt konfiguriert ist und wie erwartet 
+    funktioniert. -->
+    <NoPackageAnalysis>true</NoPackageAnalysis>
+    
   </PropertyGroup>
 
   <ItemGroup>
@@ -22,6 +29,11 @@
     
     <!-- remove MacOS specific files -->
     <Content Remove="**\*.DS_Store" />
+
+    <!-- remove obj and bin files -->
+    <Content Remove="**\bin\**\*" />
+    <Content Remove="**\obj\**\*" />
+
   </ItemGroup>
 
 </Project>
