@@ -5,6 +5,7 @@
     "identity": "Kurmann.AutomateVideoPublishing.SciTemplate",
     "name": "Service Collection Integrated Module Template",
     "shortName": "scimodule",
+    "sourceName": "ServiceCollectionIntegratedModule",
     "tags": {
       "language": "C#",
       "type": "solution"
