@@ -15,7 +15,7 @@ internal class Program
         return Host.CreateDefaultBuilder(args)
             .ConfigureAppConfiguration((hostingContext, config) =>
             {
-                config.AddEnvironmentVariables(prefix: "AutomateVideoPublishing_");
+                config.AddEnvironmentVariables(prefix: "SamplePrefix_");
             })
             .ConfigureServices((hostContext, services) =>
             {
