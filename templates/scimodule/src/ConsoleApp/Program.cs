@@ -24,7 +24,7 @@ internal class Program
                 services.AddSingleton(moduleSettings);
                 services.Configure<ModuleSettings>(hostContext.Configuration);
 
-                services.AddServiceCollectionIntegratedModule(moduleSettings);
+                services.AddModuleServices(moduleSettings);
 
                 services.AddLogging(builder =>
                 {
