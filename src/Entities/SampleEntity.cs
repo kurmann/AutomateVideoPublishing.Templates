@@ -1,6 +1,6 @@
 ﻿using CSharpFunctionalExtensions;
 
-namespace Entities;
+namespace ServiceCollectionIntegratedModule.Entities;
 
 public class SampleEntity
 {

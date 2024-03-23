@@ -1,6 +1,6 @@
-using Entities;
+using ServiceCollectionIntegratedModule.Entities;
 
-namespace Tests.Entities;
+namespace ServiceCollectionIntegratedModule.Tests.Entities;
 
 [TestClass]
 public class SampleEntityTest

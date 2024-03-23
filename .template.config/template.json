@@ -14,14 +14,6 @@
     "type": "solution"
   },
   "preferNameDirectory": true,
-  "symbols": {
-    "namespaceRoot": {
-      "type": "parameter",
-      "datatype": "string",
-      "description": "The root namespace for the project.",
-      "defaultValue": "false"
-    }
-  },
   "sources": [
     {
       "modifiers": [

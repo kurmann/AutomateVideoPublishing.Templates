@@ -1,7 +1,7 @@
-namespace Module.Queries;
-
 using CSharpFunctionalExtensions;
-using Entities;
+using ServiceCollectionIntegratedModule.Entities;
+
+namespace ServiceCollectionIntegratedModule.Module.Queries;
 
 public class SampleQuery(string? sampleParameter)
 {

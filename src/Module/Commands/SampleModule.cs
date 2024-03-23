@@ -1,7 +1,7 @@
 ﻿using CSharpFunctionalExtensions;
-using Entities;
+using ServiceCollectionIntegratedModule.Entities;
 
-namespace Module;
+namespace ServiceCollectionIntegratedModule.Module.Commands;
 
 public class SampleCommand(string? sampleParameter)
 {
