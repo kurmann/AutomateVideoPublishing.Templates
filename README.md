@@ -1,4 +1,6 @@
-# ServiceCollectionIntegratedModuleTemplate
+# Service Collection Integrated Module Template
+
+Kurzname: **"SCI Module"**
 
 `ServiceCollectionIntegratedModuleTemplate` ist ein Custom .NET Template zur schnellen Erstellung von Modulen, die nahtlos mit der `IServiceCollection` integriert werden können. Dieses Template erleichtert die Einhaltung unserer definierten Architekturprinzipien, indem es eine starke Grundstruktur für die Entwicklung von Modulen bietet, die direkt in .NET Core- oder ASP.NET Core-Anwendungen eingebunden werden können.
 
