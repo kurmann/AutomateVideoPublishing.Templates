@@ -31,7 +31,8 @@
             ".template_config/**",
             "src/**/bin/**",
             "src/**/obj/**",
-            ".git/**"
+            ".git/**",
+            "src/Readme.md"
           ]
         }
       ]
