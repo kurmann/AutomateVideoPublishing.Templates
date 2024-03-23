@@ -1,7 +1,7 @@
 {
     "$schema": "http://json.schemastore.org/template",
     "author": "Patrick Kurmann",
-    "classifications": [ "Common", "Console", "Classlib" ],
+    "classifications": [ "Common", "ServiceCollection" ],
     "identity": "Kurmann.AutomateVideoPublishing.SciTemplate",
     "name": "Service Collection Integrated Module Template",
     "shortName": "scimodule",
