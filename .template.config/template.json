@@ -23,6 +23,8 @@
             ".template_config/**",
             "src/**/bin/**",
             "src/**/obj/**",
+            "/bin/**",
+            "/obj/**",
             ".git/**",
             "Readme.md",
             "LICENSE",
