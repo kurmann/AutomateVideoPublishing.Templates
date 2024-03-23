@@ -2,37 +2,37 @@
   <PropertyGroup>
     <PackageType>Template</PackageType>
     <PackageVersion>0.1.0</PackageVersion>
-    <PackageId>Kurmann.AutomateVideoPublishing.SciTemplate</PackageId>
-    <Title>Service Collection Integrated Module Template</Title>
+    <PackageId>Kurmann.AutomateVideoPublishing.Templates</PackageId>
+    <Title>AutomateVideoPublishing Templates</Title>
     <Authors>Patrick Kurmann</Authors>
-    <Description>Module with ConsoleApp, Entities and Test project for the AutomateVideoPublishing modular monolith architecture.</Description>
+    <Description>Templates to use when creating modules for the AutomateVideoPublishing modular .NET applicaiton.</Description>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/kurmann/sci-module-template</RepositoryUrl>
     <PackageTags>dotnet-new;templates</PackageTags>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
 
     <IncludeContentInPackage>true</IncludeContentInPackage>
     <IncludeBuildOutput>false</IncludeBuildOutput>
     <ContentTargetFolders>content</ContentTargetFolders>
+
+    <!-- Die Gitignore-Datei ist hier enthalten, da es sich um eine Lösungsvorlage für ein Modul handelt, das auf einem dedizierten Git-Repository basiert. -->
+    <NoDefaultExcludes>true</NoDefaultExcludes>
 
     <!-- Templates enthalten in der Regel keine lib oder ref Ordner, da sie keine ausführbaren Codes oder Bibliotheken 
     liefern, sondern eher eine Sammlung von Dateien und Ordnern, die als Ausgangspunkt für neue Projekte dienen. 
     Deshalb kann die Warnung NU5128 ignoriert werden, solange das Template korrekt konfiguriert ist und wie erwartet 
     funktioniert. -->
     <NoPackageAnalysis>true</NoPackageAnalysis>
-    
+
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="src\**\*" Exclude="**\bin\**\*;**\obj\**\*" />
+    <Content Include="templates\**\*" Exclude="templates\**\bin\**\*;templates\**\obj\**\*" />
+    
     <Compile Remove="**\*" />
     
     <!-- remove MacOS specific files -->
     <Content Remove="**\*.DS_Store" />
-
-    <!-- remove obj and bin files -->
-    <Content Remove="**\bin\**\*" />
-    <Content Remove="**\obj\**\*" />
 
   </ItemGroup>
 
