@@ -1,31 +1,45 @@
-# Service Collection Integrated Module Template
+# Automate Video Publishing Templates
+
+Dieses Repository, "Automate Video Publishing Templates", ist eine Sammlung von benutzerdefinierten .NET Templates, die darauf ausgelegt sind, die schnelle Entwicklung von Modulen und Anwendungen innerhalb des Automate Video Publishing Projekts zu erleichtern. Jedes Template hält sich an unsere Architekturprinzipien und bietet eine strukturierte Grundlage für den Bau modularer, wartbarer und skalierbarer Lösungen in .NET Core und ASP.NET Core Anwendungen.
+
+## Verfügbare Templates
+
+### Service Collection Integrated Module (SCI Module)
 
 Kurzname: **"SCI Module"**
 
-`ServiceCollectionIntegratedModuleTemplate` ist ein Custom .NET Template zur schnellen Erstellung von Modulen, die nahtlos mit der `IServiceCollection` integriert werden können. Dieses Template erleichtert die Einhaltung unserer definierten Architekturprinzipien, indem es eine starke Grundstruktur für die Entwicklung von Modulen bietet, die direkt in .NET Core- oder ASP.NET Core-Anwendungen eingebunden werden können.
+Das `ServiceCollectionIntegratedModuleTemplate` ist das erste Template in dieser Sammlung, entworfen für die nahtlose Erstellung von Modulen, die einfach mit der `IServiceCollection` für Dependency Injection integriert werden können. Dieses Template legt Wert auf Modularität, Event-Driven Design und klare Operationsergebnis-Typen, um den Entwicklungsprozess zu vereinfachen und Konsistenz über Module hinweg zu gewährleisten.
 
-## Features
+#### Features
 
-- **IServiceCollection Integration**: Jedes Modul ist so konzipiert, dass es Dienste über die IServiceCollection registriert, was die Dependency Injection erleichtert.
-- **Modulare Architektur**: Konformität mit unseren Architekturprinzipien von hoher Kohäsion und loser Kopplung.
-- **Event-Driven Design**: Einbeziehung von Event- und Delegate-Mustern zur Nachrichtenverarbeitung innerhalb des Moduls.
-- **Ergebnistypen für Operationen**: Verwendung von Result<T> zur expliziten Handhabung von Erfolg und Fehlerfällen.
-- **Einfache Integration**: Module können mit minimalem Aufwand in die Host-Anwendung integriert werden.
+- **IServiceCollection Integration**: Erleichtert die Registrierung von Diensten mit der IServiceCollection, was die Dependency Injection verbessert.
+- **Modulare Architektur**: Hält sich an unsere Prinzipien von hoher Kohäsion und loser Kopplung.
+- **Event-Driven Design**: Beinhaltet Event- und Delegate-Muster für die Nachrichtenverarbeitung innerhalb des Moduls.
+- **Operationsergebnis-Typen**: Nutzt Result<T> für die explizite Handhabung von Erfolgs- und Fehlerfällen.
+- **Einfache Integration**: Entwickelt für die mühelose Eingliederung in Host-Anwendungen.
 
 ## Voraussetzungen
 
-Um dieses Template zu verwenden, stellen Sie sicher, dass Sie die folgenden Voraussetzungen erfüllt haben:
+Bevor Sie diese Templates verwenden, stellen Sie sicher, dass Sie Folgendes haben:
 
-- .NET 6.0 SDK oder höher
+- .NET 6.0 SDK oder später
 
 ## Installation
 
-Installieren Sie das Template `ServiceCollectionIntegratedModuleTemplate` mit dem folgenden Befehl:
+Um ein Template zu installieren, verwenden Sie den Befehl `dotnet new` gefolgt vom Kurznamen des Templates. Zum Beispiel, um das Service Collection Integrated Module Template zu installieren:
 
 ```bash
-dotnet new --install scimodule
+dotnet new --install AutomateVideoPublishingTemplates::[Version]
 ```
 
-Ersetzen Sie `YourModuleName` durch den gewünschten Namen Ihres Moduls. Stellen Sie zudem sicher, dass alle Links und Verweise auf Dateien wie die Lizenzdatei korrekt sind und mit den Dateien in Ihrem Repository übereinstimmen.
+Ersetzen Sie [Version] mit der spezifischen Version des Template-Pakets, das Sie installieren möchten.
 
-Dieser Befehl generiert ein neues Modul mit dem Namen YourModuleName, das bereits für die Integration mit der IServiceCollection vorbereitet ist.
+## Ein Template verwenden
+
+Nach der Installation können Sie ein neues Projekt basierend auf einem Template erstellen mit:
+
+```bash
+dotnet new [TemplateShortName] -n IhrModulName
+```
+
+Ersetzen Sie [TemplateShortName] mit dem Kurznamen des Templates, das Sie verwenden möchten, und IhrModulName mit dem Namen Ihres neuen Moduls.
