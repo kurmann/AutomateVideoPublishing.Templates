@@ -32,7 +32,9 @@
             "src/**/bin/**",
             "src/**/obj/**",
             ".git/**",
-            "src/Readme.md"
+            "Readme.md",
+            "LICENSE",
+            "nuget.csproj"
           ]
         }
       ]
