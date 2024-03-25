@@ -17,6 +17,7 @@ Das `ServiceCollectionIntegratedModuleTemplate` ist das erste Template in dieser
 - **Event-Driven Design**: Beinhaltet Event- und Delegate-Muster für die Nachrichtenverarbeitung innerhalb des Moduls.
 - **Operationsergebnis-Typen**: Nutzt Result<T> für die explizite Handhabung von Erfolgs- und Fehlerfällen.
 - **Einfache Integration**: Entwickelt für die mühelose Eingliederung in Host-Anwendungen.
+- **Namespace-Unterstützung**: Der Stammnamespace `Kurmann.AutomateVideoPublishing` wird korrekt angewandt.
 
 ## Installation
 

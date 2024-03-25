@@ -5,7 +5,7 @@
     "Common",
     "ServiceCollection"
   ],
-  "identity": "Kurmann.ServiceCollectionIntegratedModule",
+  "identity": "Kurmann.AutomateVideoPublishing.ServiceCollectionIntegratedModule",
   "name": "Service Collection Integrated Module",
   "shortName": "scimodule",
   "sourceName": "ServiceCollectionIntegratedModule",

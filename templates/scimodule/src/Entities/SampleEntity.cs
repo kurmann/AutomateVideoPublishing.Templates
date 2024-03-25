@@ -1,6 +1,6 @@
 ﻿using CSharpFunctionalExtensions;
 
-namespace ServiceCollectionIntegratedModule.Entities;
+namespace Kurmann.AutomateVideoPublishing.ServiceCollectionIntegratedModule.Entities;
 
 public class SampleEntity
 {

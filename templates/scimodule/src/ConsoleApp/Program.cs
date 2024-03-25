@@ -2,9 +2,9 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using ServiceCollectionIntegratedModule.Module;
+using Kurmann.AutomateVideoPublishing.ServiceCollectionIntegratedModule.Module;
 
-namespace ServiceCollectionIntegratedModule.ConsoleApp;
+namespace Kurmann.AutomateVideoPublishing.ServiceCollectionIntegratedModule.ConsoleApp;
 
 internal class Program
 {
@@ -24,7 +24,7 @@ internal class Program
                 services.AddSingleton(moduleSettings);
                 services.Configure<ModuleSettings>(hostContext.Configuration);
 
-                services.AddModuleServices(moduleSettings);
+                services.AddServiceCollectionIntegratedModule(moduleSettings);
 
                 services.AddLogging(builder =>
                 {

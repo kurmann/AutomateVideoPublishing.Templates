@@ -1,7 +1,7 @@
 ﻿using CSharpFunctionalExtensions;
-using ServiceCollectionIntegratedModule.Entities;
+using Kurmann.AutomateVideoPublishing.ServiceCollectionIntegratedModule.Entities;
 
-namespace ServiceCollectionIntegratedModule.Module.Commands;
+namespace Kurmann.AutomateVideoPublishing.ServiceCollectionIntegratedModule.Module.Commands;
 
 public class SampleCommand(string? sampleParameter) : ICommand<SampleEntity>
 {

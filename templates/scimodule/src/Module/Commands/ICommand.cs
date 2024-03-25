@@ -1,6 +1,6 @@
 using CSharpFunctionalExtensions;
 
-namespace ServiceCollectionIntegratedModule.Module.Commands;
+namespace Kurmann.AutomateVideoPublishing.ServiceCollectionIntegratedModule.Module.Commands;
 
 public interface ICommand<T>
 {

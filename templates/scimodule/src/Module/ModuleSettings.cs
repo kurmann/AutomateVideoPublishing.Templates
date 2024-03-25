@@ -1,4 +1,4 @@
-namespace ServiceCollectionIntegratedModule.Module;
+namespace Kurmann.AutomateVideoPublishing.ServiceCollectionIntegratedModule.Module;
 
 public class ModuleSettings
 {
