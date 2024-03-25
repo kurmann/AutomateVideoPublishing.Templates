@@ -6,7 +6,7 @@ Dieses Repository, "Automate Video Publishing Templates", ist eine Sammlung von 
 
 ### Service Collection Integrated Module (SCI Module)
 
-Kurzname: **"SCI Module"**
+Kurzname: **scimodule**
 
 Das `ServiceCollectionIntegratedModuleTemplate` ist das erste Template in dieser Sammlung, entworfen für die nahtlose Erstellung von Modulen, die einfach mit der `IServiceCollection` für Dependency Injection integriert werden können. Dieses Template legt Wert auf Modularität, Event-Driven Design und klare Operationsergebnis-Typen, um den Entwicklungsprozess zu vereinfachen und Konsistenz über Module hinweg zu gewährleisten.
 
