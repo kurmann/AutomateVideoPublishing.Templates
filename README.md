@@ -18,6 +18,12 @@ Das `ServiceCollectionIntegratedModuleTemplate` ist das erste Template in dieser
 - **Operationsergebnis-Typen**: Nutzt Result<T> für die explizite Handhabung von Erfolgs- und Fehlerfällen.
 - **Einfache Integration**: Entwickelt für die mühelose Eingliederung in Host-Anwendungen.
 
+## Installation
+
+```bash
+dotnet new install Kurmann.AutomateVideoPublishing.Templates
+```
+
 ## Anwendung
 
 Nach der Installation können Sie ein neues Projekt basierend auf einem Template erstellen mit:
@@ -25,5 +31,3 @@ Nach der Installation können Sie ein neues Projekt basierend auf einem Template
 ```bash
 dotnet new [TemplateShortName] -n IhrModulName
 ```
-
-Ersetzen Sie [TemplateShortName] mit dem Kurznamen des Templates, das Sie verwenden möchten, und IhrModulName mit dem Namen Ihres neuen Moduls.
