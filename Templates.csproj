@@ -11,6 +11,7 @@
     <PackageTags>dotnet-new;templates</PackageTags>
     <TargetFramework>netstandard2.0</TargetFramework>
 
+    <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageIcon>PackageIcon.png</PackageIcon>
 
     <IncludeContentInPackage>true</IncludeContentInPackage>
@@ -36,6 +37,7 @@
     <!-- remove MacOS specific files -->
     <Content Remove="**\*.DS_Store" />
 
+    <None Include="README.md" Pack="true" PackagePath="\"/>
     <None Include="PackageIcon.png" Pack="true" PackagePath="\"/>
 
   </ItemGroup>
