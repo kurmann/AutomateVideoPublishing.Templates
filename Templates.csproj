@@ -14,19 +14,19 @@
     enthalten, jedoch keine spezifischen Markdown-Formatierungen wie fett oder kursiv oder Überschriften -->
     <PackageVersion>1.2.0</PackageVersion>
     <PackageReleaseNotes>
-    Initiale Veröffentlichung für Nuget.org mit dem Service Collection Integrated Module (SCI Module). Das ServiceCollectionIntegratedModuleTemplate ist das erste Template in dieser Sammlung, entworfen für die nahtlose Erstellung von Modulen, die einfach mit der IServiceCollection für Dependency Injection integriert werden können. Dieses Template legt Wert auf Modularität, Event-Driven Design und klare Operationsergebnis-Typen, um den Entwicklungsprozess zu vereinfachen und Konsistenz über Module hinweg zu gewährleisten.
+Initiale Veröffentlichung für Nuget.org mit dem Service Collection Integrated Module (SCI Module). Das ServiceCollectionIntegratedModuleTemplate ist das erste Template in dieser Sammlung, entworfen für die nahtlose Erstellung von Modulen, die einfach mit der IServiceCollection für Dependency Injection integriert werden können. Dieses Template legt Wert auf Modularität, Event-Driven Design und klare Operationsergebnis-Typen, um den Entwicklungsprozess zu vereinfachen und Konsistenz über Module hinweg zu gewährleisten.
 
-    Service Collection Integrated Module (SCI Module)
-    Kurzname: scimodule
+Service Collection Integrated Module (SCI Module)
+Kurzname: scimodule
 
-    Das ServiceCollectionIntegratedModuleTemplate ist das erste Template in dieser Sammlung, entworfen für die nahtlose Erstellung von Modulen, die einfach mit der IServiceCollection für Dependency Injection integriert werden können. Dieses Template legt Wert auf Modularität, Event-Driven Design und klare Operationsergebnis-Typen, um den Entwicklungsprozess zu vereinfachen und Konsistenz über Module hinweg zu gewährleisten.
+Das ServiceCollectionIntegratedModuleTemplate ist das erste Template in dieser Sammlung, entworfen für die nahtlose Erstellung von Modulen, die einfach mit der IServiceCollection für Dependency Injection integriert werden können. Dieses Template legt Wert auf Modularität, Event-Driven Design und klare Operationsergebnis-Typen, um den Entwicklungsprozess zu vereinfachen und Konsistenz über Module hinweg zu gewährleisten.
 
-    Features:
-    - IServiceCollection Integration: Erleichtert die Registrierung von Diensten mit der IServiceCollection, was die Dependency Injection verbessert.
-    - Modulare Architektur: Hält sich an unsere Prinzipien von hoher Kohäsion und loser Kopplung.
-    - Event-Driven Design: Beinhaltet Event- und Delegate-Muster für die Nachrichtenverarbeitung innerhalb des Moduls.
-    - Operationsergebnis-Typen: Nutzt Result&lt;T&gt; für die explizite Handhabung von Erfolgs- und Fehlerfällen.
-    - Einfache Integration: Entwickelt für die mühelose Eingliederung in Host-Anwendungen.
+Features:
+- IServiceCollection Integration: Erleichtert die Registrierung von Diensten mit der IServiceCollection, was die Dependency Injection verbessert.
+- Modulare Architektur: Hält sich an unsere Prinzipien von hoher Kohäsion und loser Kopplung.
+- Event-Driven Design: Beinhaltet Event- und Delegate-Muster für die Nachrichtenverarbeitung innerhalb des Moduls.
+- Operationsergebnis-Typen: Nutzt Result&lt;T&gt; für die explizite Handhabung von Erfolgs- und Fehlerfällen.
+- Einfache Integration: Entwickelt für die mühelose Eingliederung in Host-Anwendungen.
     </PackageReleaseNotes>
 
     <PackageReadmeFile>README.md</PackageReadmeFile>
