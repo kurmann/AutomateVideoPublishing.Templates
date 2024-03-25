@@ -3,9 +3,9 @@
     <PackageType>Template</PackageType>
     <PackageVersion>1.1.0</PackageVersion>
     <PackageId>Kurmann.AutomateVideoPublishing.Templates</PackageId>
-    <Title>AutomateVideoPublishing Templates</Title>
+    <Title>Automate Video Publishing Templates</Title>
     <Authors>Patrick Kurmann</Authors>
-    <Description>Templates to use when creating modules for the AutomateVideoPublishing modular .NET applicaiton.</Description>
+    <Description>Templates to use when creating modules for Automate Video Publishing.</Description>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/kurmann/AutomateVideoPublishing.Templates</RepositoryUrl>
     <PackageTags>dotnet-new;templates</PackageTags>
