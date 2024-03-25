@@ -7,7 +7,7 @@
     <Authors>Patrick Kurmann</Authors>
     <Description>Templates to use when creating modules for the AutomateVideoPublishing modular .NET applicaiton.</Description>
     <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>https://github.com/kurmann/sci-module-template</RepositoryUrl>
+    <RepositoryUrl>https://github.com/kurmann/AutomateVideoPublishing.Templates</RepositoryUrl>
     <PackageTags>dotnet-new;templates</PackageTags>
     <TargetFramework>netstandard2.0</TargetFramework>
 
