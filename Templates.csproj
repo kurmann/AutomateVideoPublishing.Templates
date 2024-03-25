@@ -12,11 +12,9 @@
 
     <!-- Die Version sollte mit jeder Veröffentlichung auf Nuget.org erhöht werden. Die Release Notes dürfen Umbrüche 
     enthalten, jedoch keine spezifischen Markdown-Formatierungen wie fett oder kursiv oder Überschriften -->
-    <PackageVersion>1.3.0</PackageVersion>
+    <PackageVersion>1.4.0</PackageVersion>
     <PackageReleaseNotes>
-Service Collection Integrated Module
-- Namespace-Unterstützung: Kurmann.AutomateVideoPublishing wird bei jedem Modul als Stammnamespace verwendet.
-- IServiceCollection-Methode heisst jetzt AddModuleName (mit "ModuleName" als Name des Moduls).
+Service Collection Integrated Module: Enthält nicht mehr die ganze Projektstruktur (also ohne gitignore und ohne src-Ordner) sondern nur die .NET-Solutionstruktur. Geht davon aus, dass das Modul in einem bestehende oder soeben eröffneten GitHub-Repository verwendet wird.
     </PackageReleaseNotes>
 
     <PackageReadmeFile>README.md</PackageReadmeFile>

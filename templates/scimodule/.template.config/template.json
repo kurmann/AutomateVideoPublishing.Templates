@@ -20,10 +20,10 @@
       "modifiers": [
         {
           "exclude": [
-            "src/.vs/**",
+            ".vs/**",
             ".template_config/**",
-            "src/**/bin/**",
-            "src/**/obj/**",
+            "**/bin/**",
+            "**/obj/**",
             "/bin/**",
             "/obj/**",
             ".git/**",
