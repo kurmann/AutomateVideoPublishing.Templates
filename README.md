@@ -6,7 +6,7 @@ Dieses Repository, "Automate Video Publishing Templates", ist eine Sammlung von 
 
 ### Service Collection Integrated Module (SCI Module)
 
-Kurzname: **"SCI Module"**
+Kurzname: **scimodule**
 
 Das `ServiceCollectionIntegratedModuleTemplate` ist das erste Template in dieser Sammlung, entworfen für die nahtlose Erstellung von Modulen, die einfach mit der `IServiceCollection` für Dependency Injection integriert werden können. Dieses Template legt Wert auf Modularität, Event-Driven Design und klare Operationsergebnis-Typen, um den Entwicklungsprozess zu vereinfachen und Konsistenz über Module hinweg zu gewährleisten.
 
@@ -18,23 +18,7 @@ Das `ServiceCollectionIntegratedModuleTemplate` ist das erste Template in dieser
 - **Operationsergebnis-Typen**: Nutzt Result<T> für die explizite Handhabung von Erfolgs- und Fehlerfällen.
 - **Einfache Integration**: Entwickelt für die mühelose Eingliederung in Host-Anwendungen.
 
-## Voraussetzungen
-
-Bevor Sie diese Templates verwenden, stellen Sie sicher, dass Sie Folgendes haben:
-
-- .NET 6.0 SDK oder später
-
-## Installation
-
-Um ein Template zu installieren, verwenden Sie den Befehl `dotnet new` gefolgt vom Kurznamen des Templates. Zum Beispiel, um das Service Collection Integrated Module Template zu installieren:
-
-```bash
-dotnet new --install AutomateVideoPublishingTemplates::[Version]
-```
-
-Ersetzen Sie [Version] mit der spezifischen Version des Template-Pakets, das Sie installieren möchten.
-
-## Ein Template verwenden
+## Anwendung
 
 Nach der Installation können Sie ein neues Projekt basierend auf einem Template erstellen mit:
 
