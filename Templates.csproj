@@ -15,6 +15,8 @@
     <PackageVersion>1.4.0</PackageVersion>
     <PackageReleaseNotes>
 Service Collection Integrated Module: Enthält nicht mehr die ganze Projektstruktur (also ohne gitignore und ohne src-Ordner) sondern nur die .NET-Solutionstruktur. Geht davon aus, dass das Modul in einem bestehende oder soeben eröffneten GitHub-Repository verwendet wird.
+
+Service Collection Integrated Module: Die "ConsoleApp" heisst neu "Application" um den allgemeinen Gebrauch zu betonen, nicht nur für Konsolenanwendungen.
     </PackageReleaseNotes>
 
     <PackageReadmeFile>README.md</PackageReadmeFile>

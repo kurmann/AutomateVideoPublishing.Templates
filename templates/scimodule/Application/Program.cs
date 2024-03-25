@@ -4,7 +4,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Kurmann.AutomateVideoPublishing.ServiceCollectionIntegratedModule.Module;
 
-namespace Kurmann.AutomateVideoPublishing.ServiceCollectionIntegratedModule.ConsoleApp;
+namespace Kurmann.AutomateVideoPublishing.ServiceCollectionIntegratedModule.Application;
 
 internal class Program
 {

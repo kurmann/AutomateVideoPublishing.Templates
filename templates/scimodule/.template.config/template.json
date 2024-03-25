@@ -9,7 +9,7 @@
   "name": "Service Collection Integrated Module",
   "shortName": "scimodule",
   "sourceName": "ServiceCollectionIntegratedModule",
-  "description": "Module with ConsoleApp, Entities and Test project for the AutomateVideoPublishing modular monolith architecture. Base Git repository including gitignore and src directory.",
+  "description": "Module with Application, Entities, Module and Test project for the AutomateVideoPublishing modular monolith architecture.",
   "tags": {
     "language": "C#",
     "type": "solution"

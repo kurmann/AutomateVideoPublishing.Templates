@@ -40,7 +40,7 @@ dotnet new scimodule -n MediaFileWatcher
 ```
 
 ergibt ein Modul mit den .NET-Projekten 
-- `Kurmann.AutomateVideoPublishing.MediaFileWatcher.ConsoleApp`
+- `Kurmann.AutomateVideoPublishing.MediaFileWatcher.Application`
 - `Kurmann.AutomateVideoPublishing.MediaFileWatcher.Module`
 - `Kurmann.AutomateVideoPublishing.MediaFileWatcher.Entities`
 - `Kurmann.AutomateVideoPublishing.MediaFileWatcher.Tests`
