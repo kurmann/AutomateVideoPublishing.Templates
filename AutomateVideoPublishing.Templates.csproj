@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <PackageType>Template</PackageType>
-    <PackageVersion>1.1.0</PackageVersion>
+    <PackageVersion>1.1.1</PackageVersion>
     <PackageId>Kurmann.AutomateVideoPublishing.Templates</PackageId>
     <Title>Automate Video Publishing Templates</Title>
     <Authors>Patrick Kurmann</Authors>
@@ -10,6 +10,8 @@
     <RepositoryUrl>https://github.com/kurmann/AutomateVideoPublishing.Templates</RepositoryUrl>
     <PackageTags>dotnet-new;templates</PackageTags>
     <TargetFramework>netstandard2.0</TargetFramework>
+
+    <PackageIcon>PackageIcon.png</PackageIcon>
 
     <IncludeContentInPackage>true</IncludeContentInPackage>
     <IncludeBuildOutput>false</IncludeBuildOutput>
@@ -33,6 +35,8 @@
     
     <!-- remove MacOS specific files -->
     <Content Remove="**\*.DS_Store" />
+
+    <None Include="PackageIcon.png" Pack="true" PackagePath="\"/>
 
   </ItemGroup>
 
