@@ -1,11 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <PackageType>Template</PackageType>
-    <PackageVersion>1.1.1</PackageVersion>
+    <PackageVersion>1.2.0</PackageVersion>
     <PackageId>Kurmann.AutomateVideoPublishing.Templates</PackageId>
     <Title>Automate Video Publishing Templates</Title>
     <Authors>Patrick Kurmann</Authors>
-    <Description>Templates to use when creating modules for Automate Video Publishing.</Description>
+    <Description>Vorlagen basierend auf .NET für das Automate Video Publishing-Projekt.</Description>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/kurmann/AutomateVideoPublishing.Templates</RepositoryUrl>
     <PackageTags>dotnet-new;templates</PackageTags>
