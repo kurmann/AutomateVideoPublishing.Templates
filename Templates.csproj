@@ -12,6 +12,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
 
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageIcon>PackageIcon.png</PackageIcon>
 
     <IncludeContentInPackage>true</IncludeContentInPackage>
@@ -38,6 +39,7 @@
     <Content Remove="**\*.DS_Store" />
 
     <None Include="README.md" Pack="true" PackagePath="\"/>
+    <None Include="LICENSE" Pack="true" PackagePath="\"/>
     <None Include="PackageIcon.png" Pack="true" PackagePath="\"/>
 
   </ItemGroup>
