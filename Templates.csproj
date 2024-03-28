@@ -7,7 +7,7 @@
     <Description>Vorlagen basierend auf .NET für das Automate Video Publishing-Projekt.</Description>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/kurmann/AutomateVideoPublishing.Templates</RepositoryUrl>
-    <PackageTags>dotnet-new;templates</PackageTags>
+    <PackageTags>dotnet-new;templates; AutomateVideoPublishing</PackageTags>
     <TargetFramework>netstandard2.0</TargetFramework>
 
     <!-- Die Version sollte mit jeder Veröffentlichung auf Nuget.org erhöht werden. Die Release Notes dürfen Umbrüche 
