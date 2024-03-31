@@ -5,10 +5,10 @@
     "Common",
     "GitHubActions"
   ],
-  "identity": "Kurmann.AutomateVideoPublishing.ServiceCollectionIntegratedModule.GitHubWorkfow",
-  "name": "Service Collection Integrated Module GitHub Workflow",
+  "identity": "Kurmann.AutomateVideoPublishing.SciModule.GitHubWorkfow",
+  "name": "SCI Module GitHub Workflow",
   "shortName": "scimodule-github-workflow",
-  "sourceName": "ServiceCollectionIntegratedModule.GitHubWorkfow",
+  "sourceName": "SciModule.GitHubWorkfow",
   "description": "Creates a GitHub Actions workflow for publishing a Service Collection Integrated Module to NuGet.org.",
   "tags": {
     "language": "YAML",

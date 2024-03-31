@@ -6,7 +6,7 @@
     "ServiceCollection"
   ],
   "identity": "Kurmann.AutomateVideoPublishing.ServiceCollectionIntegratedModule",
-  "name": "Service Collection Integrated Module",
+  "name": "SCI Module",
   "shortName": "scimodule",
   "sourceName": "ServiceCollectionIntegratedModule",
   "description": "Module with Application, Entities, Module and Test project for the AutomateVideoPublishing modular monolith architecture.",

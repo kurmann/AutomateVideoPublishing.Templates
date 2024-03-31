@@ -6,7 +6,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/src/Application/bin/Debug/net8.0/Kurmann.AutomateVideoPublishing.ServiceCollectionIntegratedModule.VisualStudioCode.DebugConfiguration.Application.dll",
+            "program": "${workspaceFolder}/src/Application/bin/Debug/net8.0/Kurmann.AutomateVideoPublishing.SciModule.VsCode.DebugConfig.Application.dll",
             "args": [],
             "cwd": "${workspaceFolder}",
             "stopAtEntry": false,
