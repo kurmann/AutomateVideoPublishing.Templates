@@ -1,0 +1,26 @@
+name: Pack .NET Template
+
+on:
+  push:
+    branches:
+      - main 
+      
+jobs:
+  pack:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '8.0.x'
+
+    - name: Pack .NET Template Project
+      run: dotnet pack --configuration Release --no-build --output nupkg
+      # Der --no-build-Parameter verhindert das Kompilieren des Codes
+
+    # Optional: Veröffentlichen Sie das Paket auf NuGet
+    - name: Publish to NuGet.org
+      run: dotnet nuget push "nupkg/*.nupkg" --api-key ${{secrets.NUGET_API_KEY}} --source https://api.nuget.org/v3/index.json
