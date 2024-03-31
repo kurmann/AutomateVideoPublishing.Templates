@@ -3,8 +3,8 @@ name: Pack .NET Template
 on:
   push:
     branches:
-      - main 
-      
+      - main
+
 jobs:
   pack:
     runs-on: ubuntu-latest
@@ -17,10 +17,8 @@ jobs:
       with:
         dotnet-version: '8.0.x'
 
+    - name: Restore NuGet packages
+      run: dotnet restore
+
     - name: Pack .NET Template Project
       run: dotnet pack --configuration Release --no-build --output nupkg
-      # Der --no-build-Parameter verhindert das Kompilieren des Codes
-
-    # Optional: Veröffentlichen Sie das Paket auf NuGet
-    - name: Publish to NuGet.org
-      run: dotnet nuget push "nupkg/*.nupkg" --api-key ${{secrets.NUGET_API_KEY}} --source https://api.nuget.org/v3/index.json
