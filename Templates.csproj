@@ -12,8 +12,9 @@
 
     <!-- Die Version sollte mit jeder Veröffentlichung auf Nuget.org erhöht werden. Die Release Notes dürfen Umbrüche 
     enthalten, jedoch keine spezifischen Markdown-Formatierungen wie fett oder kursiv oder Überschriften -->
-    <PackageVersion>1.5.1-alpha</PackageVersion>
-    <PackageReleaseNotes>Paketierung der Vorlagen via GitHub Actions.
+    <PackageVersion>1.6.0-alpha</PackageVersion>
+    <PackageReleaseNotes>Neues "NuGet Workflow" Template hinzugefügt. 
+    Erstellt eine GitHub-Action, die das Paket bei jedem Release auf NuGet.org veröffentlicht.
     </PackageReleaseNotes>
 
     <PackageReadmeFile>README.md</PackageReadmeFile>
