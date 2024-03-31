@@ -57,7 +57,7 @@ Das Template erzeugt eine GitHub Actions Workflow-Konfiguration (`YAML`-Datei), 
 #### Anwendung SCI GitHub Workflow
 
 ```bash
-dotnet new scimodule-github-workflow -n Projektname -o .
+dotnet new scimodule-github-workflow -o .
 ```
 
 erzeugt folgende Verzeichnisstruktur im Arbeitsverzeichnis
@@ -68,6 +68,8 @@ working-directory/
     └── workflows/
         └── dotnet.yml
 ```
+
+Hinweis: Die **Namensgebung des Projektes** mit `-n` Parameter hat keinen Einfluss auf die YAML-Datei und kann somit **verzichtet** werden.
 
 ### SCI Module Visual Studio Code Debug Configuration
 
