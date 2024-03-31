@@ -12,9 +12,9 @@
 
     <!-- Die Version sollte mit jeder Veröffentlichung auf Nuget.org erhöht werden. Die Release Notes dürfen Umbrüche 
     enthalten, jedoch keine spezifischen Markdown-Formatierungen wie fett oder kursiv oder Überschriften -->
-    <PackageVersion>1.6.0</PackageVersion>
-    <PackageReleaseNotes>Neues "NuGet Workflow" Template hinzugefügt. 
-    Erstellt eine GitHub-Action, die das Paket bei jedem Release auf NuGet.org veröffentlicht.
+    <PackageVersion>1.7.0-alpha</PackageVersion>
+    <PackageReleaseNotes>- NuGet-Workflow umbenannt für Bezug zum Service Collection Intergrated Module.
+    - Neues Template: Visual Studio Code Entwicklungs-Workflow-Konfigurationen
     </PackageReleaseNotes>
 
     <PackageReadmeFile>README.md</PackageReadmeFile>
