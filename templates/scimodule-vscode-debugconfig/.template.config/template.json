@@ -3,12 +3,12 @@
   "author": "Patrick Kurmann",
   "classifications": [
     "Common",
-    "VsCode",
+    "Vs Code",
     "DebugConfig"
   ],
   "identity": "Kurmann.AutomateVideoPublishing.ServiceCollectionIntegratedModule.VisualStudioCode.DebugConfiguration",
   "name": "Service Collection Integrated Module Visual Studio Code Debug Configuration",
-  "shortName": "scimodule-github-workflow",
+  "shortName": "scimodule-vscode-debugconfig",
   "sourceName": "ServiceCollectionIntegratedModule.VisualStudioCode.DebugConfiguration",
   "description": "This template creates the Visual Studio Code debug configuration for the Service Collection Integrated Module.",
   "tags": {
