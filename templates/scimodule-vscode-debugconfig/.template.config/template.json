@@ -9,7 +9,7 @@
   "identity": "Kurmann.AutomateVideoPublishing.SciModule.VsCode.DebugConfig",
   "name": "SCI Module VS Code Debug Config",
   "shortName": "scimodule-vscode-debugconfig",
-  "sourceName": "ServiceCollectionIntegratedModule.SciModule.VsCode.DebugConfig",
+  "sourceName": "SciModule.VsCode.DebugConfig",
   "description": "This template creates the Visual Studio Code debug configuration for the Service Collection Integrated Module.",
   "tags": {
     "language": "JSON",
