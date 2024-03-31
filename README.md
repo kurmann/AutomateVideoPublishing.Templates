@@ -18,7 +18,7 @@ dotnet new [TemplateShortName] -n ProjektName
 
 ## Verfügbare Templates
 
-### Service Collection Integrated Module
+### Service Collection Integrated Module (SCI Module)
 
 Kurzname: **scimodule**
 
@@ -46,7 +46,7 @@ ergibt ein Modul im "src"-Verzeichnis mit den .NET-Projekten
 - `Kurmann.AutomateVideoPublishing.MediaFileWatcher.Entities`
 - `Kurmann.AutomateVideoPublishing.MediaFileWatcher.Tests`
 
-### Service Collection Integrated Module GitHub Workflow
+### SCI Module GitHub Workflow
 
 Kurzname: **scimodule-github-workflow**
 
@@ -57,7 +57,7 @@ Das Template erzeugt eine GitHub Actions Workflow-Konfiguration (`YAML`-Datei), 
 #### Anwendung SCI GitHub Workflow
 
 ```bash
-dotnet new scimodule -n Projektname -o .
+dotnet new scimodule-github-workflow -n Projektname -o .
 ```
 
 erzeugt folgende Verzeichnisstruktur im Arbeitsverzeichnis
@@ -67,4 +67,27 @@ working-directory/
 └── .github/
     └── workflows/
         └── dotnet.yml
+```
+
+### SCI Module Visual Studio Code Debug Configuration
+
+Kurzname: **scimodule-vscode-debugconfig**
+
+#### Features SCI Module VS Code Config
+
+Dieses Modul bietet eine vordefinierte Debug-Konfiguration für die Entwicklung eines Service Collection Integrated Modules in Visual Studio Code. Es umfasst sowohl `launch.json` als auch `tasks.json`, um das Debuggen und Ausführen von Aufgaben innerhalb der VSCode-Umgebung zu erleichtern.
+
+#### Anwendung SCI Module VS Code Config
+
+```bash
+dotnet new scimodule-vscode-debugconfig -n Projektname -o .
+```
+
+erzeugt folgende Verzeichnisstruktur im Arbeitsverzeichnis
+
+```text
+scimodule-vscode-debugconfig/
+└── .vscode/
+    └── launch.json
+    └── tasks.json
 ```
