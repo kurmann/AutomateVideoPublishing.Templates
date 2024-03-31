@@ -3,7 +3,7 @@
   "author": "Patrick Kurmann",
   "classifications": [
     "Common",
-    "GitHub Actions"
+    "GitHubActions"
   ],
   "identity": "Kurmann.AutomateVideoPublishing.ServiceCollectionIntegratedModule.GitHubWorkfow",
   "name": "Service Collection Integrated Module GitHub Workflow",

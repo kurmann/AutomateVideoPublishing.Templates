@@ -3,7 +3,7 @@
   "author": "Patrick Kurmann",
   "classifications": [
     "Common",
-    "Vs Code",
+    "VsCode",
     "DebugConfig"
   ],
   "identity": "Kurmann.AutomateVideoPublishing.ServiceCollectionIntegratedModule.VisualStudioCode.DebugConfiguration",
