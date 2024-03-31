@@ -15,7 +15,7 @@ Das `ServiceCollectionIntegratedModuleTemplate` ist das erste Template in dieser
 - **IServiceCollection Integration**: Erleichtert die Registrierung von Diensten mit der IServiceCollection, was die Dependency Injection verbessert.
 - **Modulare Architektur**: Hält sich an unsere Prinzipien von hoher Kohäsion und loser Kopplung.
 - **Event-Driven Design**: Beinhaltet Event- und Delegate-Muster für die Nachrichtenverarbeitung innerhalb des Moduls.
-- **Operationsergebnis-Typen**: Nutzt Result<T> für die explizite Handhabung von Erfolgs- und Fehlerfällen.
+- **Operationsergebnis-Typen**: Nutzt `Result<T>` für die explizite Handhabung von Erfolgs- und Fehlerfällen.
 - **Einfache Integration**: Entwickelt für die mühelose Eingliederung in Host-Anwendungen.
 - **Namespace-Unterstützung**: Der Stammnamespace `Kurmann.AutomateVideoPublishing` wird korrekt angewandt.
 
@@ -39,7 +39,8 @@ dotnet new [TemplateShortName] -n IhrModulName
 dotnet new scimodule -n MediaFileWatcher
 ```
 
-ergibt ein Modul mit den .NET-Projekten 
+ergibt ein Modul mit den .NET-Projekten
+
 - `Kurmann.AutomateVideoPublishing.MediaFileWatcher.Application`
 - `Kurmann.AutomateVideoPublishing.MediaFileWatcher.Module`
 - `Kurmann.AutomateVideoPublishing.MediaFileWatcher.Entities`
