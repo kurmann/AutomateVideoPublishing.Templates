@@ -13,7 +13,7 @@ dotnet new install Kurmann.AutomateVideoPublishing.Templates
 Nach der Installation können Sie ein neues Projekt basierend auf einem Template erstellen mit:
 
 ```bash
-dotnet new [TemplateShortName] -n ProjektName
+dotnet new [TemplateShortName] -n Projektname
 ```
 
 ## Verfügbare Templates
@@ -92,4 +92,23 @@ scimodule-vscode-debugconfig/
 └── .vscode/
     └── launch.json
     └── tasks.json
+```
+
+## Empfehlungen
+
+Zum Erstellen eines kompletten Service Collection Integrated Moduls mitsamt Repository-Struktur wird die kombination der Templates `scimodule`, `scimodule-github-workflow` und `scimodule-vscode-debugconfig` empfohlen.
+
+```bash
+# Wechseln zum Wurzelverzeichnis des neu erstellte GitHub-Repositorys. 
+cd path/to/new-github-repo-root/
+
+# Service Collection Integrated Modul im "src"-Verzeichnis erstellen
+dotnet new scimodule -n Projektname -o src
+
+# Erzeuge eine passende GitHub Actions Workflow-Konfiguration
+dotnet new scimodule-github-workflow -o .
+
+# Erzeuge eine passende vordefinierte Debug-Konfiguration für Visual Studio Code
+dotnet new scimodule-vscode-debugconfig -n Projektname -o .
+
 ```
