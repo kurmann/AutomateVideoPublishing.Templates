@@ -98,17 +98,19 @@ scimodule-vscode-debugconfig/
 
 Zum Erstellen eines kompletten Service Collection Integrated Moduls mitsamt Repository-Struktur wird die kombination der Templates `scimodule`, `scimodule-github-workflow` und `scimodule-vscode-debugconfig` empfohlen.
 
+Bitte vorher zum **Wurzelverzeichnis** des neu erstellte GitHub-**Repositorys** wechseln.
+
 ```bash
-# Wechseln zum Wurzelverzeichnis des neu erstellte GitHub-Repositorys. 
-cd path/to/new-github-repo-root/
+# Definieren der Variable "Projektname"
+export PROJEKTNAME="MeinProjekt"
 
 # Service Collection Integrated Modul im "src"-Verzeichnis erstellen
-dotnet new scimodule -n Projektname -o src
+dotnet new scimodule -n $PROJEKTNAME -o src
 
 # Erzeuge eine passende GitHub Actions Workflow-Konfiguration
 dotnet new scimodule-github-workflow -o .
 
 # Erzeuge eine passende vordefinierte Debug-Konfiguration für Visual Studio Code
-dotnet new scimodule-vscode-debugconfig -n Projektname -o .
+dotnet new scimodule-vscode-debugconfig -n $PROJEKTNAME -o .
 
 ```
