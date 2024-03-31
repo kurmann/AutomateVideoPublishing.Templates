@@ -12,10 +12,11 @@
 
     <!-- Die Version sollte mit jeder Veröffentlichung auf Nuget.org erhöht werden. Die Release Notes dürfen Umbrüche 
     enthalten, jedoch keine spezifischen Markdown-Formatierungen wie fett oder kursiv oder Überschriften -->
-    <PackageVersion>1.7.0-beta</PackageVersion>
+    <PackageVersion>1.7.0-beta.1</PackageVersion>
     <PackageReleaseNotes>
   - NuGet-Workflow umbenannt für Bezug zum Service Collection Intergrated Module.
   - Neues Template: Visual Studio Code Entwicklungs-Workflow-Konfigurationen
+  - Erweiterte Dokumentation mit Emfpehlungen für das Aufsetzen eines ganzen Git-Repository.
     </PackageReleaseNotes>
 
     <PackageReadmeFile>README.md</PackageReadmeFile>
