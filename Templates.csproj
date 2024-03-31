@@ -12,11 +12,8 @@
 
     <!-- Die Version sollte mit jeder Veröffentlichung auf Nuget.org erhöht werden. Die Release Notes dürfen Umbrüche 
     enthalten, jedoch keine spezifischen Markdown-Formatierungen wie fett oder kursiv oder Überschriften -->
-    <PackageVersion>1.4.0</PackageVersion>
-    <PackageReleaseNotes>
-Service Collection Integrated Module: Enthält nicht mehr die ganze Projektstruktur (also ohne gitignore und ohne src-Ordner) sondern nur die .NET-Solutionstruktur. Geht davon aus, dass das Modul in einem bestehende oder soeben eröffneten GitHub-Repository verwendet wird.
-
-Service Collection Integrated Module: Die "ConsoleApp" heisst neu "Application" um den allgemeinen Gebrauch zu betonen, nicht nur für Konsolenanwendungen.
+    <PackageVersion>1.5.0-alpha</PackageVersion>
+    <PackageReleaseNotes>Paketierung der Vorlagen via GitHub Actions.
     </PackageReleaseNotes>
 
     <PackageReadmeFile>README.md</PackageReadmeFile>
