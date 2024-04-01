@@ -1,6 +1,6 @@
 using CSharpFunctionalExtensions;
 
-namespace Kurmann.Videoschnitt.ServiceCollectionIntegratedModule.Module.Commands;
+namespace Kurmann.Videoschnitt.ServiceCollectionIntegratedModule.Commands;
 
 public interface ICommand<T>
 {

@@ -1,7 +1,7 @@
 using CSharpFunctionalExtensions;
 using Kurmann.Videoschnitt.ServiceCollectionIntegratedModule.Entities;
 
-namespace Kurmann.Videoschnitt.ServiceCollectionIntegratedModule.Module.Queries;
+namespace Kurmann.Videoschnitt.ServiceCollectionIntegratedModule.Queries;
 
 public class SampleQuery(string? sampleParameter) : IQueryService<SampleEntity>
 {
