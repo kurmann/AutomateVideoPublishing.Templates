@@ -7,7 +7,7 @@
     <RootNamespace>Kurmann.Videoschnitt.ServiceCollectionIntegratedModule.Module</RootNamespace>
     <AssemblyName>Kurmann.Videoschnitt.ServiceCollectionIntegratedModule.Module</AssemblyName>
     <PackageId>Kurmann.Videoschnitt.ServiceCollectionIntegratedModule.Module</PackageId>
-    <Version>1.0.0</Version>
+    <Version>0.1.0-alpha</Version>
   </PropertyGroup>
 
   <ItemGroup>
