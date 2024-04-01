@@ -1,7 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 
 namespace Kurmann.Videoschnitt.ServiceCollectionIntegratedModule.Application;
 
@@ -11,25 +10,26 @@ internal class Program
 
     public static IHostBuilder CreateHostBuilder(string[] args)
     {
-        return Host.CreateDefaultBuilder(args)
-            .ConfigureAppConfiguration((hostingContext, config) =>
-            {
-                config.AddEnvironmentVariables(prefix: "SamplePrefix_");
-            })
-            .ConfigureServices((hostContext, services) =>
-            {
-                var moduleSettings = new ModuleSettings();
-                hostContext.Configuration.Bind(moduleSettings);
-                services.AddSingleton(moduleSettings);
-                services.Configure<ModuleSettings>(hostContext.Configuration);
+        var builder = Host.CreateDefaultBuilder(args);
 
-                services.AddServiceCollectionIntegratedModule(moduleSettings);
-
-                services.AddLogging(builder =>
-                {
-                    builder.ClearProviders();
-                    builder.AddConsole();
-                });
+        if (Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == Environments.Development)
+        {
+            builder.ConfigureAppConfiguration((hostingContext, config) =>
+            {
+                config.AddUserSecrets<Program>();
             });
+        }
+
+        builder.ConfigureServices((hostContext, services) =>
+        {
+            services.Configure<ModuleSettings>(hostContext.Configuration);
+            builder.ConfigureServices((hostContext, services) =>
+            {
+                services.Configure<ModuleSettings>(hostContext.Configuration);
+                services.AddServiceCollectionIntegratedModule(hostContext.Configuration);
+            });
+        });
+
+        return builder;
     }
 }
