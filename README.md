@@ -36,15 +36,17 @@ Das `ServiceCollectionIntegratedModuleTemplate` ist das erste Template in dieser
 #### Anwendung SCI Module
 
 ```bash
-dotnet new scimodule -n MediaFileWatcher -o src
+dotnet new scimodule -n Projektname -o src
 ```
 
 ergibt ein Modul im "src"-Verzeichnis mit den .NET-Projekten
 
-- `Kurmann.Videoschnitt.MediaFileWatcher.Application`
-- `Kurmann.Videoschnitt.MediaFileWatcher.Module`
-- `Kurmann.Videoschnitt.MediaFileWatcher.Entities`
-- `Kurmann.Videoschnitt.MediaFileWatcher.Tests`
+```text
+working-directory/
+└── src/
+    └── Kurmann.Videoschnitt.Projektname
+    └── Kurmann.Videoschnitt.Projektname.Application
+```
 
 ### SCI Module GitHub Workflow
 
@@ -112,17 +114,60 @@ Das `Entity Library Template` wurde entwickelt, um die Erstellung von Class-Libr
 #### Anwendung Entity Library
 
 ```bash
-dotnet new entitylib -n DomainLogic -o src
+dotnet new entitylib -n EntityLibName -o src
 ```
 
 ergibt eine Class-Library im "src"-Verzeichnis mit den .NET-Projekten
 
-- `Kurmann.Videoschnitt.DomainLogic`
-- `Kurmann.Videoschnitt.DomainLogic.Tests`
+```text
+working-directory/
+└── src/
+    └── Kurmann.Videoschnitt.EntityLibName
+    └── Kurmann.Videoschnitt.EntityLibName.Tests
+```
 
 Dieses Setup ist optimal für Entwickler, die sich auf die Implementierung von Domänenlogik mit einem klaren Fokus auf funktionale Programmierprinzipien und testgetriebene Entwicklung konzentrieren möchten.
 
+### Entity Library GitHub Workflow
+
+Kurzname: **entitylib-github-workflow**
+
+Das `Entity Library GitHub Workflow` Template erweitert die Sammlung von .NET Templates um eine automatisierte CI/CD Pipeline speziell für die `Entity Library`. Es generiert eine GitHub Actions Workflow-Konfiguration, die spezifisch für das Bauen, Testen und optional das Veröffentlichen einer .NET Class-Library, welche die Domänenlogik beinhaltet, auf NuGet.org ausgelegt ist.
+
+#### Features Entity Library GitHub Workflow
+
+- **Automatisierte CI/CD Pipeline**: Konfiguriert GitHub Actions für das automatische Bauen und Testen der Entity Library bei jedem Push oder Pull Request.
+- **NuGet-Veröffentlichung**: Ermöglicht die automatische Veröffentlichung der gebauten Library auf NuGet.org, abhängig von spezifischen Triggern oder Tags.
+- **Angepasste Workflow-Events**: Unterstützt verschiedene GitHub Event-Typen wie `push`, `pull_request` oder manuell ausgelöste Workflows.
+- **Testautomatisierung**: Führt automatisch alle definierten Unit- und Integrationstests als Teil des CI-Prozesses aus.
+- **Flexibilität und Anpassbarkeit**: Ermöglicht einfache Anpassungen der Workflow-Schritte, um spezifische Anforderungen oder Projektkonfigurationen zu berücksichtigen.
+
+#### Anwendung Entity Library GitHub Workflow
+
+```bash
+dotnet new entitylib-github-workflow -o .
+```
+
+erzeugt folgende Verzeichnisstruktur im Arbeitsverzeichnis
+
+```text
+working-directory/
+└── .github/
+    └── workflows/
+        └── entitylib-ci-cd.yml
+```
+
+Die Konfigurationsdatei `entitylib-ci-cd.yml` ist so voreingestellt, dass sie die Entity Library bei jedem `push` auf den `main`-Zweig oder bei jedem `pull_request` gegen den `main`-Zweig baut und testet. Optional kann die Konfiguration so erweitert werden, dass erfolgreiche Builds automatisch auf NuGet.org veröffentlicht werden, sobald ein neuer Release-Tag gepusht wird.
+
+Dieses Template ist eine essenzielle Erweiterung für Teams, die die Entity Library in ihre Entwicklungspipeline integrieren möchten, um eine kontinuierliche Qualitätssicherung und -verbesserung der Domänenlogik zu gewährleisten.
+
 ## Empfehlungen
+
+### NuGet API Key
+
+Um die automatische Veröffentlichung Ihrer NuGet-Pakete über die GitHub Actions Workflow zu ermöglichen, ist es notwendig, den `NUGET_API_KEY` in den GitHub Secrets jedes Repositories zu hinterlegen. Dieser API-Key ermöglicht es GitHub Actions, die Pakete in Ihrem Namen auf NuGet.org zu veröffentlichen. Sie können den API-Key von Ihrem NuGet.org-Konto erhalten und sollten diesen sicher im Abschnitt Settings > Secrets > Actions Ihres GitHub-Repositories speichern. Durch das Setzen dieses Secrets stellen Sie sicher, dass Ihre CI/CD Pipeline die Pakete erfolgreich auf NuGet.org pushen kann, ohne Ihren API-Key offenlegen zu müssen.
+
+### Komplette Erstellung eines SCI Modul Repository
 
 Zum Erstellen eines kompletten Service Collection Integrated Moduls mitsamt Repository-Struktur wird die kombination der Templates `scimodule`, `scimodule-github-workflow` und `scimodule-vscode-debugconfig` empfohlen.
 

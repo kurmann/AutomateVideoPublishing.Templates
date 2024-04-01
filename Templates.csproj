@@ -12,8 +12,8 @@
 
     <!-- Die Version sollte mit jeder Veröffentlichung auf Nuget.org erhöht werden. Die Release Notes dürfen Umbrüche 
     enthalten, jedoch keine spezifischen Markdown-Formatierungen wie fett oder kursiv oder Überschriften -->
-    <PackageVersion>1.8.0-beta.2</PackageVersion>
-    <PackageReleaseNotes>Vollständige csproj-Eigenschaften für die Nuget-Veröffentlichung. Das SCI Modul und Entity Lib haben somit alle Nuget-relevanten Eigenschaften in der csproj-Datei definiert.
+    <PackageVersion>1.9.0-beta</PackageVersion>
+    <PackageReleaseNotes>Neues Template für GitHub-Workflow zur Erstellung und Veröffentlichung des NuGet-Packets für die Entity Library.
     </PackageReleaseNotes>
 
     <PackageReadmeFile>README.md</PackageReadmeFile>
