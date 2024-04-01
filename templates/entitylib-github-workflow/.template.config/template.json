@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Patrick Kurmann",
+  "classifications": [
+    "Common",
+    "GitHubActions"
+  ],
+  "identity": "Kurmann.Videoschnitt.EntityLib.GitHubWorkfow",
+  "name": "Entity Library GitHub Workflow",
+  "shortName": "entitylib-github-workflow",
+  "sourceName": "EntityLib.GitHubWorkfow",
+  "description": "Creates a GitHub Actions workflow for publishing a entity library to NuGet.org.",
+  "tags": {
+    "language": "YAML",
+    "type": "item"
+  },
+  "preferNameDirectory": true,
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "exclude": [
+            ".vs/**",
+            ".template_config/**",
+            "**/bin/**",
+            "**/obj/**",
+            "/bin/**",
+            "/obj/**",
+            ".git/**",
+            "Readme.md",
+            "LICENSE",
+            "nuget.csproj"
+          ]
+        }
+      ]
+    }
+  ]
+}
