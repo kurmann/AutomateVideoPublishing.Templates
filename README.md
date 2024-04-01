@@ -32,6 +32,7 @@ Das `ServiceCollectionIntegratedModuleTemplate` ist das erste Template in dieser
 - **Operationsergebnis-Typen**: Nutzt `Result<T>` für die explizite Handhabung von Erfolgs- und Fehlerfällen.
 - **Einfache Integration**: Entwickelt für die mühelose Eingliederung in Host-Anwendungen.
 - **Namespace-Unterstützung**: Der Stammnamespace `Kurmann.Videoschnitt` wird korrekt angewandt.
+- **Konfigurationsmodell**: Vollständige Unterstützung des .NET `IOptions`-Pattern einschliesslich Beispiel-Integration von .NET User Secrets.
 
 #### Anwendung SCI Module
 
@@ -182,3 +183,44 @@ dotnet new scimodule-github-workflow -o .
 dotnet new scimodule-vscode-debugconfig -n $PROJEKTNAME -o .
 
 ```
+
+### Konfiguration von Modulen
+
+Wenn Sie ein Modul über unser .NET-Template erstellen, wird die Konfiguration des Moduls durch eine dedizierte Sektion in der Konfigurationsdatei ermöglicht. Diese Sektion ist nach dem Muster `Kurmann.Videoschnitt.YourModuleName` benannt, wobei `YourModuleName` der Name Ihres spezifischen Moduls ist. 
+
+#### Anpassung der Moduleinstellungen
+
+Innerhalb jeder Modul-Konfigurationssektion können Sie die `ModuleSettings`-Klasse anpassen, um verschiedene Konfigurationswerte zu definieren. Diese Werte können Sie dann einfach in der `appsettings.json` oder durch Umgebungsvariablen konfigurieren.
+
+#### Beispiel
+
+Für ein Modul namens `VideoEditor` würden Sie eine Sektion `Kurmann.Videoschnitt.VideoEditor` in Ihrer `appsettings.json` hinzufügen:
+
+```json
+{
+  "Kurmann.Videoschnitt.VideoEditor": {
+    "OutputPath": "/path/to/output"
+  }
+}
+```
+
+Anschließend passen Sie die `ModuleSettings`-Klasse in Ihrem Modul an, um den `OutputPath` als Konfigurationseinstellung zu definieren:
+
+```csharp
+public class ModuleSettings
+{
+    public string OutputPath { get; set; } = "Standardwert";
+}
+```
+
+#### Nutzung in Ihrer Anwendung
+
+Durch die Anwendung des `IOptions`-Patterns können Sie diese Konfigurationswerte leicht in Ihrem Modul abrufen und verwenden. Dies bietet Ihnen eine flexible und starke Typisierung für die Verwaltung von Konfigurationseinstellungen.
+
+#### Vorteile
+
+- **Flexibilität:** Jedes Modul kann unabhängig konfiguriert werden, was die Anpassung und Erweiterung erleichtert.
+- **Einfachheit:** Die Verwendung der `ModuleSettings`-Klasse zusammen mit dem `IOptions`-Pattern macht den Zugriff auf Konfigurationswerte klar und einfach.
+- **Anpassbarkeit:** Sie können Konfigurationswerte leicht ändern, ohne den Code des Moduls anpassen zu müssen, sei es durch Bearbeitung der `appsettings.json` oder Setzen von Umgebungsvariablen.
+
+Diese Struktur ermöglicht es Ihnen, Ihre Anwendung modular und flexibel zu gestalten, mit klaren und einfachen Konfigurationsmechanismen für jedes Modul.

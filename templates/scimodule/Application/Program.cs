@@ -1,7 +1,5 @@
 ﻿using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 
 namespace Kurmann.Videoschnitt.ServiceCollectionIntegratedModule.Application;
 
@@ -14,22 +12,16 @@ internal class Program
         return Host.CreateDefaultBuilder(args)
             .ConfigureAppConfiguration((hostingContext, config) =>
             {
-                config.AddEnvironmentVariables(prefix: "SamplePrefix_");
+                if (hostingContext.HostingEnvironment.IsDevelopment())
+                {
+                    // execute "dotnet user-secrets init" in the project folder to create the secrets.json file
+                    // add specific secrets with "dotnet user-secrets set "Kurmann:Videoschnitt:MikaModule:SampleSetting" "Secret Value""
+                    config.AddUserSecrets<Program>();
+                }
             })
             .ConfigureServices((hostContext, services) =>
             {
-                var moduleSettings = new ModuleSettings();
-                hostContext.Configuration.Bind(moduleSettings);
-                services.AddSingleton(moduleSettings);
-                services.Configure<ModuleSettings>(hostContext.Configuration);
-
-                services.AddServiceCollectionIntegratedModule(moduleSettings);
-
-                services.AddLogging(builder =>
-                {
-                    builder.ClearProviders();
-                    builder.AddConsole();
-                });
+                services.AddServiceCollectionIntegratedModule(hostContext.Configuration);
             });
     }
 }
