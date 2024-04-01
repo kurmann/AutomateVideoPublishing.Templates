@@ -10,8 +10,8 @@ public static class ServiceCollectionExtensions
         this IServiceCollection services,
         IConfiguration configuration)
     {
-        // Bindet Konfigurationswerte an ModuleSettings und registriert ModuleSettings als Options-Pattern
-        services.Configure<ModuleSettings>(configuration.GetSection("ModuleSettings"));
+        // Bindet Root-Konfigurationswerte an ModuleSettings
+        services.Configure<ModuleSettings>(configuration.GetSection(ModuleSettings.SectionName));
         
         // Dienste hinzufügen
         services.AddHostedService<SampleHostedService>();
