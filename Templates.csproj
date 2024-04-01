@@ -12,8 +12,8 @@
 
     <!-- Die Version sollte mit jeder Veröffentlichung auf Nuget.org erhöht werden. Die Release Notes dürfen Umbrüche 
     enthalten, jedoch keine spezifischen Markdown-Formatierungen wie fett oder kursiv oder Überschriften -->
-    <PackageVersion>1.9.0-beta.2</PackageVersion>
-    <PackageReleaseNotes>Integration von UserSecrets, vereinfachte Program.cs
+    <PackageVersion>1.10.0-beta</PackageVersion>
+    <PackageReleaseNotes>Integration von UserSecrets, vereinfachte Konfiguration.
     </PackageReleaseNotes>
 
     <PackageReadmeFile>README.md</PackageReadmeFile>
