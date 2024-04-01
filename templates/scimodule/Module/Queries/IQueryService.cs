@@ -1,6 +1,6 @@
 using CSharpFunctionalExtensions;
 
-namespace Kurmann.Videoschnitt.ServiceCollectionIntegratedModule.Module.Queries;
+namespace Kurmann.Videoschnitt.ServiceCollectionIntegratedModule.Queries;
 
 public interface IQueryService<T>
 {

@@ -1,4 +1,4 @@
-namespace Kurmann.Videoschnitt.ServiceCollectionIntegratedModule.Module;
+namespace Kurmann.Videoschnitt.ServiceCollectionIntegratedModule;
 
 public class ModuleSettings
 {

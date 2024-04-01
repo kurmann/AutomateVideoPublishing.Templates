@@ -1,21 +1,20 @@
 ﻿using CSharpFunctionalExtensions;
-using Kurmann.Videoschnitt.ServiceCollectionIntegratedModule.Entities;
 
-namespace Kurmann.Videoschnitt.ServiceCollectionIntegratedModule.Module.Commands;
+namespace Kurmann.Videoschnitt.ServiceCollectionIntegratedModule.Commands;
 
-public class SampleCommand(string? sampleParameter) : ICommand<SampleEntity>
+public class SampleCommand(string? sampleParameter) : ICommand<SampleCommandResult>
 {
     private readonly string? sampleParameter = sampleParameter;
 
-    public Result<SampleEntity> Execute()
+    public Result<SampleCommandResult> Execute()
     {
         if (string.IsNullOrWhiteSpace(sampleParameter))
-            return Result.Failure<SampleEntity>("Sample parameter cannot be empty");
-        
-        var sampleEntity = SampleEntity.Create(sampleParameter);
-        if (sampleEntity.IsFailure)
-            return Result.Failure<SampleEntity>(sampleEntity.Error);
+            return Result.Failure<SampleCommandResult>("Sample parameter cannot be empty");
+    
+        var commandResult = new SampleCommandResult(sampleParameter);
 
-        return Result.Success(sampleEntity.Value);
+        return Result.Success(commandResult);
     }
 }
+
+public record SampleCommandResult(string Result);

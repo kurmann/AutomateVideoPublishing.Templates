@@ -1,4 +1,4 @@
-using Kurmann.Videoschnitt.EntityLib.Entities;
+using Kurmann.Videoschnitt.EntityLib;
 
 namespace Kurmann.Videoschnitt.EntityLib.Tests.Entities;
 

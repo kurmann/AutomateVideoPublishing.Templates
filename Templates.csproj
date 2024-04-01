@@ -12,8 +12,9 @@
 
     <!-- Die Version sollte mit jeder Veröffentlichung auf Nuget.org erhöht werden. Die Release Notes dürfen Umbrüche 
     enthalten, jedoch keine spezifischen Markdown-Formatierungen wie fett oder kursiv oder Überschriften -->
-    <PackageVersion>1.8.0-beta</PackageVersion>
-    <PackageReleaseNotes>Neues Entity Library Template: Das Entity Library Template wurde entwickelt, um die Erstellung von Class-Libraries für die Domänenlogik in .NET-Projekten zu vereinfachen. Durch die Verwendung der C# Functional Extensions Library als Result-Typ, fördert dieses Template einen funktionalen Programmieransatz und verbessert die Handhabung von Operationsergebnissen.
+    <PackageVersion>1.8.0-beta.1</PackageVersion>
+    <PackageReleaseNotes>- Neues Entity Library Template: Das Entity Library Template wurde entwickelt, um die Erstellung von Class-Libraries für die Domänenlogik in .NET-Projekten zu vereinfachen. Durch die Verwendung der C# Functional Extensions Library als Result-Typ, fördert dieses Template einen funktionalen Programmieransatz und verbessert die Handhabung von Operationsergebnissen.
+- Vereinfachter Namespace für das SCI Module (ohne "Modul"-Subnamespace) und die Entity Library (ohne "Entities"-Subnamespace).
     </PackageReleaseNotes>
 
     <PackageReadmeFile>README.md</PackageReadmeFile>
