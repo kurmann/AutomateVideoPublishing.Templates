@@ -1,11 +1,11 @@
-# Automate Video Publishing Templates
+# Videoschnitt Templates
 
-Dieses Repository, "Automate Video Publishing Templates", ist eine Sammlung von benutzerdefinierten .NET Templates, die darauf ausgelegt sind, die schnelle Entwicklung von Modulen und Anwendungen innerhalb des Automate Video Publishing Projekts zu erleichtern. Jedes Template hält sich an unsere Architekturprinzipien und bietet eine strukturierte Grundlage für den Bau modularer, wartbarer und skalierbarer Lösungen in .NET Core und ASP.NET Core Anwendungen.
+Dieses Repository, "Videoschnitt Templates", ist eine Sammlung von benutzerdefinierten .NET Templates, die darauf ausgelegt sind, die schnelle Entwicklung von Modulen und Anwendungen innerhalb des Videoschnitt Projekts zu erleichtern. Jedes Template hält sich an unsere Architekturprinzipien und bietet eine strukturierte Grundlage für den Bau modularer, wartbarer und skalierbarer Lösungen in .NET Core und ASP.NET Core Anwendungen.
 
 ## Installation
 
 ```bash
-dotnet new install Kurmann.AutomateVideoPublishing.Templates
+dotnet new install Kurmann.Videoschnitt.Templates
 ```
 
 ## Anwendung
@@ -31,7 +31,7 @@ Das `ServiceCollectionIntegratedModuleTemplate` ist das erste Template in dieser
 - **Event-Driven Design**: Beinhaltet Event- und Delegate-Muster für die Nachrichtenverarbeitung innerhalb des Moduls.
 - **Operationsergebnis-Typen**: Nutzt `Result<T>` für die explizite Handhabung von Erfolgs- und Fehlerfällen.
 - **Einfache Integration**: Entwickelt für die mühelose Eingliederung in Host-Anwendungen.
-- **Namespace-Unterstützung**: Der Stammnamespace `Kurmann.AutomateVideoPublishing` wird korrekt angewandt.
+- **Namespace-Unterstützung**: Der Stammnamespace `Kurmann.Videoschnitt` wird korrekt angewandt.
 
 #### Anwendung SCI Module
 
@@ -41,10 +41,10 @@ dotnet new scimodule -n MediaFileWatcher -o src
 
 ergibt ein Modul im "src"-Verzeichnis mit den .NET-Projekten
 
-- `Kurmann.AutomateVideoPublishing.MediaFileWatcher.Application`
-- `Kurmann.AutomateVideoPublishing.MediaFileWatcher.Module`
-- `Kurmann.AutomateVideoPublishing.MediaFileWatcher.Entities`
-- `Kurmann.AutomateVideoPublishing.MediaFileWatcher.Tests`
+- `Kurmann.Videoschnitt.MediaFileWatcher.Application`
+- `Kurmann.Videoschnitt.MediaFileWatcher.Module`
+- `Kurmann.Videoschnitt.MediaFileWatcher.Entities`
+- `Kurmann.Videoschnitt.MediaFileWatcher.Tests`
 
 ### SCI Module GitHub Workflow
 
@@ -100,17 +100,12 @@ Zum Erstellen eines kompletten Service Collection Integrated Moduls mitsamt Repo
 
 Bitte vorher zum **Wurzelverzeichnis** des neu erstellte GitHub-**Repositorys** wechseln.
 
+Erstellt ein Service Collection Integrated Modul um "src"-Verzeichnis und erzeugt eine passende GitHub Actions Workflow-Konfiguration und eine passende vordefinierte Debug-Konfiguration für Visual Studio Code.
+
 ```bash
-# Definieren der Variable "Projektname"
 export PROJEKTNAME="MeinProjekt"
-
-# Service Collection Integrated Modul im "src"-Verzeichnis erstellen
 dotnet new scimodule -n $PROJEKTNAME -o src
-
-# Erzeuge eine passende GitHub Actions Workflow-Konfiguration
 dotnet new scimodule-github-workflow -o .
-
-# Erzeuge eine passende vordefinierte Debug-Konfiguration für Visual Studio Code
 dotnet new scimodule-vscode-debugconfig -n $PROJEKTNAME -o .
 
 ```

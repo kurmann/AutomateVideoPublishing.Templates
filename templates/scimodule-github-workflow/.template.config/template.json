@@ -5,7 +5,7 @@
     "Common",
     "GitHubActions"
   ],
-  "identity": "Kurmann.AutomateVideoPublishing.SciModule.GitHubWorkfow",
+  "identity": "Kurmann.Videoschnitt.SciModule.GitHubWorkfow",
   "name": "SCI Module GitHub Workflow",
   "shortName": "scimodule-github-workflow",
   "sourceName": "SciModule.GitHubWorkfow",

@@ -1,7 +1,7 @@
 using Microsoft.Extensions.DependencyInjection;
-using Kurmann.AutomateVideoPublishing.ServiceCollectionIntegratedModule.Module.Services;
+using Kurmann.Videoschnitt.ServiceCollectionIntegratedModule.Module.Services;
 
-namespace Kurmann.AutomateVideoPublishing.ServiceCollectionIntegratedModule.Module;
+namespace Kurmann.Videoschnitt.ServiceCollectionIntegratedModule.Module;
 
 public static class ServiceCollection
 {

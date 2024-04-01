@@ -1,7 +1,7 @@
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace Kurmann.AutomateVideoPublishing.ServiceCollectionIntegratedModule.Module.Services;
+namespace Kurmann.Videoschnitt.ServiceCollectionIntegratedModule.Module.Services;
 
 public class SampleHostedService(ILogger<SampleHostedService> logger) : IHostedService, IDisposable
 {

@@ -4,9 +4,9 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <RootNamespace>Kurmann.AutomateVideoPublishing.ServiceCollectionIntegratedModule.Module</RootNamespace>
-    <AssemblyName>Kurmann.AutomateVideoPublishing.ServiceCollectionIntegratedModule.Module</AssemblyName>
-    <PackageId>Kurmann.AutomateVideoPublishing.ServiceCollectionIntegratedModule.Module</PackageId>
+    <RootNamespace>Kurmann.Videoschnitt.ServiceCollectionIntegratedModule.Module</RootNamespace>
+    <AssemblyName>Kurmann.Videoschnitt.ServiceCollectionIntegratedModule.Module</AssemblyName>
+    <PackageId>Kurmann.Videoschnitt.ServiceCollectionIntegratedModule.Module</PackageId>
     <Version>1.0.0</Version>
   </PropertyGroup>
 

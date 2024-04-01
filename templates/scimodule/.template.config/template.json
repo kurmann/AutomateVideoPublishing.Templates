@@ -5,11 +5,11 @@
     "Common",
     "ServiceCollection"
   ],
-  "identity": "Kurmann.AutomateVideoPublishing.ServiceCollectionIntegratedModule",
+  "identity": "Kurmann.Videoschnitt.ServiceCollectionIntegratedModule",
   "name": "SCI Module",
   "shortName": "scimodule",
   "sourceName": "ServiceCollectionIntegratedModule",
-  "description": "Module with Application, Entities, Module and Test project for the AutomateVideoPublishing modular monolith architecture.",
+  "description": "Module with Application, Entities, Module and Test project for the Videoschnitt modular monolith architecture.",
   "tags": {
     "language": "C#",
     "type": "solution"

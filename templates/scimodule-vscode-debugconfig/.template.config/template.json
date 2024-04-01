@@ -6,7 +6,7 @@
     "VsCode",
     "DebugConfig"
   ],
-  "identity": "Kurmann.AutomateVideoPublishing.SciModule.VsCode.DebugConfig",
+  "identity": "Kurmann.Videoschnitt.SciModule.VsCode.DebugConfig",
   "name": "SCI Module VS Code Debug Config",
   "shortName": "scimodule-vscode-debugconfig",
   "sourceName": "SciModule.VsCode.DebugConfig",
