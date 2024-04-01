@@ -1,6 +1,6 @@
 ﻿using CSharpFunctionalExtensions;
 
-namespace Kurmann.Videoschnitt.ServiceCollectionIntegratedModule.Entities;
+namespace Kurmann.Videoschnitt.EntityLib.Entities;
 
 public class SampleEntity
 {

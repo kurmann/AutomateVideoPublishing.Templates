@@ -1,6 +1,6 @@
-using Kurmann.Videoschnitt.ServiceCollectionIntegratedModule.Entities;
+using Kurmann.Videoschnitt.EntityLib.Entities;
 
-namespace Kurmann.Videoschnitt.ServiceCollectionIntegratedModule.Tests.Entities;
+namespace Kurmann.Videoschnitt.EntityLib.Tests.Entities;
 
 [TestClass]
 public class SampleEntityTest
