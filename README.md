@@ -94,6 +94,34 @@ scimodule-vscode-debugconfig/
     └── tasks.json
 ```
 
+### Entity Library Template
+
+Kurzname: **entitylib**
+
+Das `Entity Library Template` wurde entwickelt, um die Erstellung von Class-Libraries für die Domänenlogik in .NET-Projekten zu vereinfachen. Durch die Verwendung der C# Functional Extensions Library als `Result`-Typ, fördert dieses Template einen funktionalen Programmieransatz und verbessert die Handhabung von Operationsergebnissen.
+
+#### Features Entity Library
+
+- **C# Functional Extensions**: Verwendet die C# Functional Extensions Library, um `Result`-Typen für die Rückgabe von Operationsergebnissen zu ermöglichen.
+- **Fokussiert auf Domänenlogik**: Ideal für die Entwicklung von Bibliotheken, die Geschäftslogik und Domänenmodelle enthalten.
+- **Test-Projekt Integration**: Erstellt automatisch ein zugehöriges Test-Projekt, um die Qualität und Funktionalität der Domänenlogik sicherzustellen.
+- **.NET Class-Library Basis**: Bietet eine solide Grundlage für die Entwicklung von wiederverwendbaren .NET Class-Libraries.
+- **Modularer Aufbau**: Fördert die Entwicklung von sauber strukturierten, modularen und wartbaren Code-Basen.
+- **Namespace-Unterstützung**: Passt sich nahtlos an den Stammnamespace `Kurmann.Videoschnitt` an und gewährleistet eine konsistente Namensgebung.
+
+#### Anwendung Entity Library
+
+```bash
+dotnet new entitylib -n DomainLogic -o src
+```
+
+ergibt eine Class-Library im "src"-Verzeichnis mit den .NET-Projekten
+
+- `Kurmann.Videoschnitt.DomainLogic`
+- `Kurmann.Videoschnitt.DomainLogic.Tests`
+
+Dieses Setup ist optimal für Entwickler, die sich auf die Implementierung von Domänenlogik mit einem klaren Fokus auf funktionale Programmierprinzipien und testgetriebene Entwicklung konzentrieren möchten.
+
 ## Empfehlungen
 
 Zum Erstellen eines kompletten Service Collection Integrated Moduls mitsamt Repository-Struktur wird die kombination der Templates `scimodule`, `scimodule-github-workflow` und `scimodule-vscode-debugconfig` empfohlen.
