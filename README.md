@@ -32,6 +32,7 @@ Das `ServiceCollectionIntegratedModuleTemplate` ist das erste Template in dieser
 - **Operationsergebnis-Typen**: Nutzt `Result<T>` für die explizite Handhabung von Erfolgs- und Fehlerfällen.
 - **Einfache Integration**: Entwickelt für die mühelose Eingliederung in Host-Anwendungen.
 - **Namespace-Unterstützung**: Der Stammnamespace `Kurmann.Videoschnitt` wird korrekt angewandt.
+- **Konfigurationsmodell**: Vollständige Unterstützung des .NET `IOptions`-Pattern.
 
 #### Anwendung SCI Module
 
@@ -182,3 +183,49 @@ dotnet new scimodule-github-workflow -o .
 dotnet new scimodule-vscode-debugconfig -n $PROJEKTNAME -o .
 
 ```
+
+### Konfigurationsmodell
+
+Dieses Projekt nutzt das `IOptions`-Pattern für eine flexible und konsistente Konfigurationsverwaltung. Durch dieses Muster können wir eine starke Typisierung und Validierung unserer Konfigurationseinstellungen gewährleisten, während wir gleichzeitig von der eingebauten Unterstützung für Änderungsbenachrichtigungen profitieren.
+
+#### Konfigurationsübersicht
+
+Konfigurationseinstellungen werden in einem hierarchischen Format organisiert, das eine intuitive Strukturierung und leichte Zugänglichkeit ermöglicht. Für jedes Modul können spezifische Einstellungen definiert werden, die zentral verwaltet und zur Laufzeit abgerufen werden können.
+
+#### Beispiel: Ausgabeverzeichnis für den VideoEditor
+
+Ein praktisches Beispiel für die Anwendung dieses Konfigurationsmodells ist die Einstellung des Ausgabeverzeichnisses für den `VideoEditor`. Die Konfigurationseinstellung könnte in der `appsettings.json` unter dem Schlüssel `Kurmann.Videoschnitt.VideoEditor.OutputPath` definiert werden:
+
+```json
+{
+  "Kurmann.Videoschnitt": {
+    "VideoEditor": {
+      "OutputPath": "/path/to/output"
+    }
+  }
+}
+```
+
+Über Umgebungsvariablen lässt sich dieser Wert leicht überschreiben, indem die entsprechende Variable wie folgt gesetzt wird: `Kurmann_Videoschnitt_VideoEditor_OutputPath`.
+
+#### Nutzung des IOptions-Patterns
+
+Um auf die Konfigurationseinstellungen zuzugreifen, nutzen wir das `IOptions`-Pattern. Dies ermöglicht uns nicht nur, die Einstellungen stark typisiert zu nutzen, sondern bietet auch die Flexibilität, Einstellungen zur Laufzeit zu aktualisieren, falls dies notwendig sein sollte. Hier ein Beispiel, wie die Konfiguration injiziert und verwendet wird:
+
+```csharp
+public class VideoEditorService
+{
+    private readonly string _outputPath;
+
+    public VideoEditorService(IOptions<KurmannVideoschnittSettings> settings)
+    {
+        _outputPath = settings.Value.VideoEditor.OutputPath;
+    }
+
+    // Verwenden von _outputPath in der Logik des Services
+}
+```
+
+#### Fazit Konfigurationsmodell
+
+Durch die Anwendung des `IOptions`-Patterns erreichen wir eine hohe Flexibilität in der Konfigurationsverwaltung unseres Projekts. Es ermöglicht uns, Konfigurationen einfach zu strukturieren, sicher zu verwalten und dynamisch anzupassen, was die Entwicklung und Wartung vereinfacht.
