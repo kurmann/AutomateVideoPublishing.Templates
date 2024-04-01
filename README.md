@@ -157,6 +157,12 @@ Dieses Template ist eine essenzielle Erweiterung für Teams, die die Entity Libr
 
 ## Empfehlungen
 
+### NuGet API Key
+
+Um die automatische Veröffentlichung Ihrer NuGet-Pakete über die GitHub Actions Workflow zu ermöglichen, ist es notwendig, den `NUGET_API_KEY` in den GitHub Secrets jedes Repositories zu hinterlegen. Dieser API-Key ermöglicht es GitHub Actions, die Pakete in Ihrem Namen auf NuGet.org zu veröffentlichen. Sie können den API-Key von Ihrem NuGet.org-Konto erhalten und sollten diesen sicher im Abschnitt Settings > Secrets > Actions Ihres GitHub-Repositories speichern. Durch das Setzen dieses Secrets stellen Sie sicher, dass Ihre CI/CD Pipeline die Pakete erfolgreich auf NuGet.org pushen kann, ohne Ihren API-Key offenlegen zu müssen.
+
+### Komplette Erstellung eines SCI Modul Repository
+
 Zum Erstellen eines kompletten Service Collection Integrated Moduls mitsamt Repository-Struktur wird die kombination der Templates `scimodule`, `scimodule-github-workflow` und `scimodule-vscode-debugconfig` empfohlen.
 
 Bitte vorher zum **Wurzelverzeichnis** des neu erstellte GitHub-**Repositorys** wechseln.
