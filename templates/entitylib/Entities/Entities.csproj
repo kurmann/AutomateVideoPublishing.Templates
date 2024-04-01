@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>Kurmann.Videoschnitt.EntityLib.Entities</RootNamespace>
+    <AssemblyName>Kurmann.Videoschnitt.EntityLib.Entities</AssemblyName>
+    <PackageId>Kurmann.Videoschnitt.EntityLib.Entities</PackageId>
+    <Version>1.0.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CSharpFunctionalExtensions" Version="2.41.0" />
+  </ItemGroup>
+
+</Project>
