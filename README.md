@@ -184,48 +184,43 @@ dotnet new scimodule-vscode-debugconfig -n $PROJEKTNAME -o .
 
 ```
 
-### Konfigurationsmodell
+### Konfiguration von Modulen
 
-Dieses Projekt nutzt das `IOptions`-Pattern für eine flexible und konsistente Konfigurationsverwaltung. Durch dieses Muster können wir eine starke Typisierung und Validierung unserer Konfigurationseinstellungen gewährleisten, während wir gleichzeitig von der eingebauten Unterstützung für Änderungsbenachrichtigungen profitieren.
+Wenn Sie ein Modul über unser .NET-Template erstellen, wird die Konfiguration des Moduls durch eine dedizierte Sektion in der Konfigurationsdatei ermöglicht. Diese Sektion ist nach dem Muster `Kurmann.Videoschnitt.YourModuleName` benannt, wobei `YourModuleName` der Name Ihres spezifischen Moduls ist. 
 
-#### Konfigurationsübersicht
+#### Anpassung der Moduleinstellungen
 
-Konfigurationseinstellungen werden in einem hierarchischen Format organisiert, das eine intuitive Strukturierung und leichte Zugänglichkeit ermöglicht. Für jedes Modul können spezifische Einstellungen definiert werden, die zentral verwaltet und zur Laufzeit abgerufen werden können.
+Innerhalb jeder Modul-Konfigurationssektion können Sie die `ModuleSettings`-Klasse anpassen, um verschiedene Konfigurationswerte zu definieren. Diese Werte können Sie dann einfach in der `appsettings.json` oder durch Umgebungsvariablen konfigurieren.
 
-#### Beispiel: Ausgabeverzeichnis für den VideoEditor
+#### Beispiel
 
-Ein praktisches Beispiel für die Anwendung dieses Konfigurationsmodells ist die Einstellung des Ausgabeverzeichnisses für den `VideoEditor`. Die Konfigurationseinstellung könnte in der `appsettings.json` unter dem Schlüssel `Kurmann.Videoschnitt.VideoEditor.OutputPath` definiert werden:
+Für ein Modul namens `VideoEditor` würden Sie eine Sektion `Kurmann.Videoschnitt.VideoEditor` in Ihrer `appsettings.json` hinzufügen:
 
 ```json
 {
-  "Kurmann.Videoschnitt": {
-    "VideoEditor": {
-      "OutputPath": "/path/to/output"
-    }
+  "Kurmann.Videoschnitt.VideoEditor": {
+    "OutputPath": "/path/to/output"
   }
 }
 ```
 
-Über Umgebungsvariablen lässt sich dieser Wert leicht überschreiben, indem die entsprechende Variable wie folgt gesetzt wird: `Kurmann_Videoschnitt_VideoEditor_OutputPath`.
-
-#### Nutzung des IOptions-Patterns
-
-Um auf die Konfigurationseinstellungen zuzugreifen, nutzen wir das `IOptions`-Pattern. Dies ermöglicht uns nicht nur, die Einstellungen stark typisiert zu nutzen, sondern bietet auch die Flexibilität, Einstellungen zur Laufzeit zu aktualisieren, falls dies notwendig sein sollte. Hier ein Beispiel, wie die Konfiguration injiziert und verwendet wird:
+Anschließend passen Sie die `ModuleSettings`-Klasse in Ihrem Modul an, um den `OutputPath` als Konfigurationseinstellung zu definieren:
 
 ```csharp
-public class VideoEditorService
+public class ModuleSettings
 {
-    private readonly string _outputPath;
-
-    public VideoEditorService(IOptions<KurmannVideoschnittSettings> settings)
-    {
-        _outputPath = settings.Value.VideoEditor.OutputPath;
-    }
-
-    // Verwenden von _outputPath in der Logik des Services
+    public string OutputPath { get; set; } = "Standardwert";
 }
 ```
 
-#### Fazit Konfigurationsmodell
+#### Nutzung in Ihrer Anwendung
 
-Durch die Anwendung des `IOptions`-Patterns erreichen wir eine hohe Flexibilität in der Konfigurationsverwaltung unseres Projekts. Es ermöglicht uns, Konfigurationen einfach zu strukturieren, sicher zu verwalten und dynamisch anzupassen, was die Entwicklung und Wartung vereinfacht.
+Durch die Anwendung des `IOptions`-Patterns können Sie diese Konfigurationswerte leicht in Ihrem Modul abrufen und verwenden. Dies bietet Ihnen eine flexible und starke Typisierung für die Verwaltung von Konfigurationseinstellungen.
+
+#### Vorteile
+
+- **Flexibilität:** Jedes Modul kann unabhängig konfiguriert werden, was die Anpassung und Erweiterung erleichtert.
+- **Einfachheit:** Die Verwendung der `ModuleSettings`-Klasse zusammen mit dem `IOptions`-Pattern macht den Zugriff auf Konfigurationswerte klar und einfach.
+- **Anpassbarkeit:** Sie können Konfigurationswerte leicht ändern, ohne den Code des Moduls anpassen zu müssen, sei es durch Bearbeitung der `appsettings.json` oder Setzen von Umgebungsvariablen.
+
+Diese Struktur ermöglicht es Ihnen, Ihre Anwendung modular und flexibel zu gestalten, mit klaren und einfachen Konfigurationsmechanismen für jedes Modul.
