@@ -4,9 +4,9 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <RootNamespace>Kurmann.Videoschnitt.EntityLib.Entities</RootNamespace>
-    <AssemblyName>Kurmann.Videoschnitt.EntityLib.Entities</AssemblyName>
-    <PackageId>Kurmann.Videoschnitt.EntityLib.Entities</PackageId>
+    <RootNamespace>Kurmann.Videoschnitt.EntityLib</RootNamespace>
+    <AssemblyName>Kurmann.Videoschnitt.EntityLib</AssemblyName>
+    <PackageId>Kurmann.Videoschnitt.EntityLib</PackageId>
     <Version>1.0.0</Version>
   </PropertyGroup>
 
