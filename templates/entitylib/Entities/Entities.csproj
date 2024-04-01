@@ -32,10 +32,10 @@
     <!-- Die README.md-Datei, die im NuGet-Paket eingebettet wird. Entspricht gleichzeitig der GitHub Readme-Datei. -->
     <PackageReadmeFile>README.md</PackageReadmeFile>
 
-    <!-- Die Lizenzdatei, die im NuGet-Paket eingebettet wird. -->
+    <!-- Die Lizenzdatei, die im NuGet-Paket eingebettet wird (befindet sich im Wurzelverzeichnis). -->
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
 
-    <!-- Das Icon, das im NuGet-Paket eingebettet wird. -->
+    <!-- Das Icon, das im NuGet-Paket eingebettet wird (befindet sich im Wurzelverzeichnis). -->
     <PackageIcon>PackageIcon.png</PackageIcon>
 
     <!-- Assemblies und Symbol-Dateien werden im NuGet-Paket eingebettet. -->
