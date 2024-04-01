@@ -26,7 +26,7 @@
 
     <!-- Die Release Notes gelten pro Version und sollten dementsprechend bei jeder neuen Version angepasst werden.  -->
     <!-- Die Notes dürfen Umbrüche enthalten, jedoch keine spezifischen Markdown-Formatierungen wie fett oder kursiv oder Überschriften -->
-    <PackageReleaseNotes>Umbenennung des Hauptnamespaces von "AutomateVideoPublishing" zu "Videoschnitt". Bisheriges NuGet-Paket "Kurmann.AutomateVideoPublishing.MediaFileWatcher" wird nicht mehr unterstützt.
+    <PackageReleaseNotes>
     </PackageReleaseNotes>
 
     <!-- Die README.md-Datei, die im NuGet-Paket eingebettet wird. Entspricht gleichzeitig der GitHub Readme-Datei. -->
