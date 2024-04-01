@@ -2,7 +2,6 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using Kurmann.Videoschnitt.ServiceCollectionIntegratedModule;
 
 namespace Kurmann.Videoschnitt.ServiceCollectionIntegratedModule.Application;
 
