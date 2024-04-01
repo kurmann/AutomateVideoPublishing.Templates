@@ -36,15 +36,17 @@ Das `ServiceCollectionIntegratedModuleTemplate` ist das erste Template in dieser
 #### Anwendung SCI Module
 
 ```bash
-dotnet new scimodule -n MediaFileWatcher -o src
+dotnet new scimodule -n Projektname -o src
 ```
 
 ergibt ein Modul im "src"-Verzeichnis mit den .NET-Projekten
 
-- `Kurmann.Videoschnitt.MediaFileWatcher.Application`
-- `Kurmann.Videoschnitt.MediaFileWatcher.Module`
-- `Kurmann.Videoschnitt.MediaFileWatcher.Entities`
-- `Kurmann.Videoschnitt.MediaFileWatcher.Tests`
+```text
+working-directory/
+└── src/
+    └── Kurmann.Videoschnitt.Projektname
+    └── Kurmann.Videoschnitt.Projektname.Application
+```
 
 ### SCI Module GitHub Workflow
 
@@ -112,13 +114,17 @@ Das `Entity Library Template` wurde entwickelt, um die Erstellung von Class-Libr
 #### Anwendung Entity Library
 
 ```bash
-dotnet new entitylib -n DomainLogic -o src
+dotnet new entitylib -n EntityLibName -o src
 ```
 
 ergibt eine Class-Library im "src"-Verzeichnis mit den .NET-Projekten
 
-- `Kurmann.Videoschnitt.DomainLogic`
-- `Kurmann.Videoschnitt.DomainLogic.Tests`
+```text
+working-directory/
+└── src/
+    └── Kurmann.Videoschnitt.EntityLibName
+    └── Kurmann.Videoschnitt.EntityLibName.Tests
+```
 
 Dieses Setup ist optimal für Entwickler, die sich auf die Implementierung von Domänenlogik mit einem klaren Fokus auf funktionale Programmierprinzipien und testgetriebene Entwicklung konzentrieren möchten.
 
