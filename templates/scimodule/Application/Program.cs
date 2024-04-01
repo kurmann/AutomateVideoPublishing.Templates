@@ -2,9 +2,9 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using Kurmann.AutomateVideoPublishing.ServiceCollectionIntegratedModule.Module;
+using Kurmann.Videoschnitt.ServiceCollectionIntegratedModule.Module;
 
-namespace Kurmann.AutomateVideoPublishing.ServiceCollectionIntegratedModule.Application;
+namespace Kurmann.Videoschnitt.ServiceCollectionIntegratedModule.Application;
 
 internal class Program
 {

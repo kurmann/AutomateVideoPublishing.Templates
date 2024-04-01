@@ -1,22 +1,19 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <PackageType>Template</PackageType>
-    <PackageId>Kurmann.AutomateVideoPublishing.Templates</PackageId>
-    <Title>Automate Video Publishing Templates</Title>
+    <PackageId>Kurmann.Videoschnitt.Templates</PackageId>
+    <Title>Videoschnitt-Templates</Title>
     <Authors>Patrick Kurmann</Authors>
-    <Description>Vorlagen basierend auf .NET für das Automate Video Publishing-Projekt.</Description>
+    <Description>Vorlagen basierend auf .NET für das Videoschnitt-Projekt.</Description>
     <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>https://github.com/kurmann/AutomateVideoPublishing.Templates</RepositoryUrl>
-    <PackageTags>dotnet-new;templates; AutomateVideoPublishing</PackageTags>
+    <RepositoryUrl>https://github.com/kurmann/Videoschnitt.Templates</RepositoryUrl>
+    <PackageTags>dotnet-new;templates; Videoschnitt</PackageTags>
     <TargetFramework>netstandard2.0</TargetFramework>
 
     <!-- Die Version sollte mit jeder Veröffentlichung auf Nuget.org erhöht werden. Die Release Notes dürfen Umbrüche 
     enthalten, jedoch keine spezifischen Markdown-Formatierungen wie fett oder kursiv oder Überschriften -->
-    <PackageVersion>1.7.0-beta.1</PackageVersion>
-    <PackageReleaseNotes>
-  - NuGet-Workflow umbenannt für Bezug zum Service Collection Intergrated Module.
-  - Neues Template: Visual Studio Code Entwicklungs-Workflow-Konfigurationen
-  - Erweiterte Dokumentation mit Emfpehlungen für das Aufsetzen eines ganzen Git-Repository.
+    <PackageVersion>1.7.0-beta.2</PackageVersion>
+    <PackageReleaseNotes>Umbenennung des Produkts von "Automate Video Publishing" in "Videoschnitt". Bisheriges NuGet-Packet "Kurmann.Videoschnitt.Templates" wird obsolet.
     </PackageReleaseNotes>
 
     <PackageReadmeFile>README.md</PackageReadmeFile>

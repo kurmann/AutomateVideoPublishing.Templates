@@ -6,8 +6,8 @@
     <Nullable>enable</Nullable>
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
-    <RootNamespace>Kurmann.AutomateVideoPublishing.ServiceCollectionIntegratedModule.Tests</RootNamespace>
-    <AssemblyName>Kurmann.AutomateVideoPublishing.ServiceCollectionIntegratedModule.Tests</AssemblyName>
+    <RootNamespace>Kurmann.Videoschnitt.ServiceCollectionIntegratedModule.Tests</RootNamespace>
+    <AssemblyName>Kurmann.Videoschnitt.ServiceCollectionIntegratedModule.Tests</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
