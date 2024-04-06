@@ -278,3 +278,65 @@ Innerhalb des `Entities/`-Ordners finden Sie das Projekt für die Bibliothek, da
 `EntityLibName.sln` ist die zugehörige Solution-Datei, welche beide Projekte (die Entitätsbibliothek und das Testprojekt) für eine einfachere Verwaltung in Entwicklungs-Tools wie Visual Studio zusammenfasst.
 
 Diese Konfiguration gewährleistet eine klare Trennung zwischen der Implementierung der Geschäftslogik und den Tests, was für eine saubere Codebasis und leichtere Wartbarkeit sorgt.
+
+### Videoschnitt Entity Library GitHub Workflow
+
+Kurzname: **videoschnitt-entitylib-wf**
+
+Das `VideoschnittEntityLibraryWorkflowTemplate` schafft eine CI/CD-Pipeline mittels GitHub Actions für das automatische Bauen, Testen und Veröffentlichen von Entity Libraries des Videoschnitt Projekts auf NuGet.org.
+
+#### Features Videoschnitt Entity Library GitHub Workflow
+
+- **Automatisierte CI/CD-Pipeline**: Konfiguriert GitHub Actions für die Automatisierung des Build- und Pack-Prozesses.
+- **.NET Core Setup**: Einrichtung und Verwendung einer spezifischen .NET-Version für den Build-Prozess.
+- **Abhängigkeitsmanagement**: Wiederherstellung der benötigten Pakete vor dem Build.
+- **NuGet-Paketierung**: Erstellt NuGet-Pakete aus dem Class-Library-Projekt.
+- **NuGet-Veröffentlichung**: Stellt die erstellten Pakete auf NuGet.org bereit und verwendet dabei GitHub Secrets, um den NuGet API-Key sicher zu handhaben.
+
+#### Anwendung Videoschnitt Entity Library GitHub Workflow
+
+Die Einrichtung der CI/CD-Pipeline für die Entity Library erfolgt durch den folgenden Befehl:
+
+```bash
+dotnet new videoschnitt-entitylib-wf -o .
+```
+
+Durch diesen Befehl wird eine `dotnet.yml` Workflow-Datei im `.github/workflows`-Verzeichnis des Projekts erstellt, die folgende Schritte für den CI/CD-Prozess vorsieht:
+
+```yaml
+name: .NET CI/CD
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build_and_pack:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '8.0.x'
+        
+    - name: Restore dependencies for Module
+      run: dotnet restore src/Entities/Entities.csproj
+
+    - name: Pack Entities
+      run: dotnet pack src/Entities/Entities.csproj --output ./nupkgs
+
+    # Veröffentlichen der NuGet-Pakete
+    - name: Push NuGet and Symbol Packages
+      run: |
+        dotnet nuget push ./nupkgs/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
+        dotnet nuget push ./nupkgs/*.snupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
+```
+
+Diese Konfiguration sorgt dafür, dass Ihre Entity Library automatisch gebaut und verpackt wird, und bei Bedarf – wenn zum Beispiel ein Tag gepusht wird – auf NuGet.org veröffentlicht wird. Durch den Einsatz von `--skip-duplicate` wird verhindert, dass bereits existierende Paketversionen zu Konflikten führen.
+
+Die CI/CD-Pipeline ist ein wichtiger Bestandteil moderner Softwareentwicklungsprozesse und stellt sicher, dass Ihre Bibliothek immer nach den neuesten Änderungen neu gebaut, getestet und veröffentlicht wird.
