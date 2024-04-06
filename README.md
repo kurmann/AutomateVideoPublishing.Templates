@@ -136,3 +136,97 @@ jobs:
 ```
 
 Diese Workflow-Datei stellt sicher, dass Ihr Modul immer gebaut, verpackt und optional veröffentlicht wird, sobald Änderungen im `main`-Zweig gepusht oder Pull Requests eingereicht werden. Sie garantiert eine konsistente Build-Umgebung und eine verlässliche Bereitstellung der Module.
+
+### Videoschnitt Modul Debug Konfiguration
+
+Kurzname: **videoschnitt-module-debug**
+
+Das `VideoschnittModulDebugTemplate` ist eine essentielle Hilfe für Entwickler, um schnell eine funktionierende Debug-Umgebung in Visual Studio Code für das Videoschnitt Modul einzurichten. Es generiert die `launch.json` und `tasks.json`, die für das Ausführen und Debuggen des Moduls in Visual Studio Code nötig sind.
+
+#### Features Videoschnitt Modul Debug
+
+- **Angepasste .NET Core Launch Konfiguration**: Ermöglicht das Debuggen der Anwendung mit detaillierten Einstellungen.
+- **Vorkonfigurierte Build- und Watch-Tasks**: Unterstützt die Entwicklung mit Aufgaben zum Bauen und Beobachten des Projekts in Echtzeit.
+- **Einfache Integration in den Workflow**: Durch die Voreinstellungen kann sofort mit dem Debuggen begonnen werden, ohne zusätzliche Konfigurationen vornehmen zu müssen.
+
+#### Anwendung Videoschnitt Modul Debug
+
+Nach Erstellung des Videoschnitt Moduls können Sie die Debug-Konfiguration hinzufügen:
+
+```bash
+dotnet new videoschnitt-module-debug -n IhrModulname -o .
+```
+
+Dieser Befehl platziert die entsprechenden Dateien in einem `.vscode`-Verzeichnis an der Wurzel des Projekts. Die resultierenden Dateien `launch.json` und `tasks.json` werden auf Ihr spezifisches Modul zugeschnitten sein.
+
+Die `launch.json` Datei könnte so aussehen:
+
+```json
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": ".NET Core Launch (console)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/src/Application/bin/Debug/net8.0/Kurmann.Videoschnitt.SciModule.VsCode.DebugConfig.Application.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+            "console": "internalConsole",
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            }
+        }
+    ]
+}
+```
+
+Und die `tasks.json` Datei stellt die notwendigen Aufgaben für den Build und das Watchen des Projekts bereit:
+
+```json
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/src/Application/Application.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary;ForceNoAlign"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "publish",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "${workspaceFolder}/src/Application/Application.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary;ForceNoAlign"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "watch",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "watch",
+                "run",
+                "--project",
+                "${workspaceFolder}/src/Application/Application.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}
+```
+
+Mit dieser Konfiguration können Entwickler direkt in Visual Studio Code das Projekt bauen, veröffentlichen und in Echtzeit Veränderungen beobachten, was den Entwicklungsprozess erheblich vereinfacht und beschleunigt.
