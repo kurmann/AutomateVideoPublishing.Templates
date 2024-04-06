@@ -7,10 +7,10 @@
     "GitHub"
   ],
   "identity": "Kurmann.Videoschnitt.EntityLib.GitHubWorkfow",
-  "name": "Entity Library GitHub Workflow",
-  "shortName": "entitylib-github-workflow",
+  "name": "Videoschnitt Library GitHub Workflow",
+  "shortName": "videoschnitt-entitylib-wf",
   "sourceName": "EntityLib.GitHubWorkfow",
-  "description": "Creates a GitHub Actions workflow for publishing a entity library to NuGet.org.",
+  "description": "Creates a GitHub Actions workflow for publishing a entity library to NuGet.org for the Kurmann.Videoschnitt namespace.",
   "tags": {
     "language": "YAML",
     "type": "item"
