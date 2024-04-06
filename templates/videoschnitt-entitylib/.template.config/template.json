@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Patrick Kurmann",
+  "classifications": [
+    "Kurmann",
+    "Videoschnitt",
+    "ClassLibrary"
+  ],
+  "identity": "Kurmann.Videoschnitt.EntityLib",
+  "name": "Videoschnitt Entity Library",
+  "shortName": "videoschnitt-entitylib",
+  "sourceName": "EntityLib",
+  "description": "A .NET Class-Library template for domain logic with an associated test project, using C# Functional Extensions for Result types for the Kurmann.Videoschnitt namespace.",
+  "tags": {
+    "language": "C#",
+    "type": "solution"
+  },
+  "preferNameDirectory": true,
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "exclude": [
+            ".vs/**",
+            ".template_config/**",
+            "**/bin/**",
+            "**/obj/**",
+            "/bin/**",
+            "/obj/**",
+            "/TestResults/**",
+            ".git/**",
+            "Readme.md",
+            "LICENSE",
+            "nuget.csproj"
+          ]
+        }
+      ]
+    }
+  ]
+}

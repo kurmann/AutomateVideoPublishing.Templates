@@ -1,226 +1,363 @@
 # Videoschnitt Templates
 
-Dieses Repository, "Videoschnitt Templates", ist eine Sammlung von benutzerdefinierten .NET Templates, die darauf ausgelegt sind, die schnelle Entwicklung von Modulen und Anwendungen innerhalb des Videoschnitt Projekts zu erleichtern. Jedes Template hält sich an unsere Architekturprinzipien und bietet eine strukturierte Grundlage für den Bau modularer, wartbarer und skalierbarer Lösungen in .NET Core und ASP.NET Core Anwendungen.
+Dieses Repository, "Videoschnitt Templates", ist eine Sammlung von benutzerdefinierten .NET Templates, die speziell darauf ausgelegt sind, die schnelle Entwicklung von Modulen und Anwendungen für das Videoschnitt Projekt zu erleichtern. Diese Templates dienen als strukturierte Grundlage für den Bau modularer, wartbarer und skalierbarer Lösungen, wobei sowohl .NET Core als auch ASP.NET Core Anwendungen unterstützt werden. Jedes Template wurde sorgfältig entworfen, um unseren Architekturprinzipien zu entsprechen und eine effiziente und konsistente Entwicklungserfahrung zu gewährleisten.
 
 ## Installation
+
+Um die Videoschnitt Templates zu verwenden, beginnen Sie mit der Installation des gesamten Template-Pakets über die .NET CLI. Dies ermöglicht es Ihnen, neue Projekte mit den bereitgestellten Templates zu initialisieren. Die Installation kann mit dem folgenden Befehl durchgeführt werden:
 
 ```bash
 dotnet new install Kurmann.Videoschnitt.Templates
 ```
 
+Diese Aktion fügt alle Videoschnitt Templates Ihrem .NET CLI Tool hinzu, sodass Sie darauf zugreifen und sie für die Erstellung neuer Projekte nutzen können.
+
 ## Anwendung
 
-Nach der Installation können Sie ein neues Projekt basierend auf einem Template erstellen mit:
+Nach der Installation der Templates können Sie ein neues Projekt basierend auf einem der Videoschnitt Templates erstellen. Verwenden Sie dazu den Befehl `dotnet new` mit dem Kurznamen des gewünschten Templates, gefolgt vom `-n` Argument, um den Namen Ihres neuen Projekts anzugeben. Das Grundformat des Befehls sieht wie folgt aus:
 
 ```bash
 dotnet new [TemplateShortName] -n Projektname
 ```
 
-## Verfügbare Templates
+Dabei ist `[TemplateShortName]` durch den Kurznamen des Templates zu ersetzen, das Sie verwenden möchten, und `Projektname` durch den gewünschten Namen Ihres Projekts. Dieser Prozess initialisiert ein neues Projektverzeichnis, das auf der Struktur und den Voreinstellungen des ausgewählten Templates basiert.
 
-### Service Collection Integrated Module (SCI Module)
+Die Anwendung der Videoschnitt Templates ermöglicht es Ihnen, schnell mit der Entwicklung zu beginnen, indem sie eine vordefinierte Projektstruktur und Konfiguration bieten, die speziell auf die Anforderungen und Best Practices des Videoschnitt Projekts abgestimmt sind.
 
-Kurzname: **scimodule**
+## Templates
 
-Das `ServiceCollectionIntegratedModuleTemplate` ist das erste Template in dieser Sammlung, entworfen für die nahtlose Erstellung von Modulen, die einfach mit der `IServiceCollection` für Dependency Injection integriert werden können. Dieses Template legt Wert auf Modularität, Event-Driven Design und klare Operationsergebnis-Typen, um den Entwicklungsprozess zu vereinfachen und Konsistenz über Module hinweg zu gewährleisten.
+### Videoschnitt Modul
 
-#### Features SCI Module
+Kurzname: **videoschnitt-module**
 
-- **IServiceCollection Integration**: Erleichtert die Registrierung von Diensten mit der IServiceCollection, was die Dependency Injection verbessert.
-- **Modulare Architektur**: Hält sich an unsere Prinzipien von hoher Kohäsion und loser Kopplung.
-- **Event-Driven Design**: Beinhaltet Event- und Delegate-Muster für die Nachrichtenverarbeitung innerhalb des Moduls.
-- **Operationsergebnis-Typen**: Nutzt `Result<T>` für die explizite Handhabung von Erfolgs- und Fehlerfällen.
-- **Einfache Integration**: Entwickelt für die mühelose Eingliederung in Host-Anwendungen.
-- **Namespace-Unterstützung**: Der Stammnamespace `Kurmann.Videoschnitt` wird korrekt angewandt.
-- **Konfigurationsmodell**: Vollständige Unterstützung des .NET `IOptions`-Pattern einschliesslich Beispiel-Integration von .NET User Secrets.
+Das `VideoschnittModulTemplate` ist ein fundamentales Template dieser Sammlung, entworfen für die Erstellung von Modulen, die sich nahtlos in die .NET Core und ASP.NET Core Anwendungen einfügen. Diese Module können leicht mit der `IServiceCollection` für Dependency Injection integriert werden und legen einen starken Fokus auf Modularität, Event-Driven Design sowie klare Operationsergebnis-Typen.
 
-#### Anwendung SCI Module
+#### Features Videoschnitt Modul
+
+- **IServiceCollection Integration**: Vereinfacht die Registrierung von Diensten und deren Abhängigkeiten, was die Verwendung von Dependency Injection innerhalb des Moduls erleichtert.
+- **Modulare Architektur**: Fördert die Entwicklung von klar definierten, unabhängigen Modulen, die sich durch hohe Kohäsion und lose Kopplung auszeichnen.
+- **Event-Driven Design**: Unterstützt die Implementierung von Event-basierten Kommunikationsmustern zwischen den Komponenten des Moduls, um eine flexible und erweiterbare Architektur zu fördern.
+- **Operationsergebnis-Typen**: Verwendung von `Result<T>` und ähnlichen Mustern für die explizite Handhabung von Erfolgs- und Fehlerfällen in Geschäftslogikoperationen.
+- **Einfache Integration**: Entwickelt für die mühelose Eingliederung in bestehende Host-Anwendungen, was die Wiederverwendbarkeit und Skalierbarkeit von Modulen verbessert.
+- **Namespace-Unterstützung**: Verwendet den Stammnamespace `Kurmann.Videoschnitt` und gewährleistet eine konsistente und klare Organisationsstruktur des Codes.
+- **Konfigurationsmodell**: Vollständige Unterstützung des .NET `IOptions`-Pattern, einschließlich der Integration von .NET User Secrets für eine sichere und flexible Konfiguration.
+
+#### Anwendung Videoschnitt Modul
+
+Um ein neues Videoschnitt Modul zu erstellen, verwenden Sie den folgenden Befehl in Ihrem Terminal oder Command Prompt:
 
 ```bash
-dotnet new scimodule -n Projektname -o src
+dotnet new videoschnitt-module -n IhrModulname -o src
 ```
 
-ergibt ein Modul im "src"-Verzeichnis mit den .NET-Projekten
+Dieser Befehl generiert eine neue Modulstruktur im Verzeichnis `src` basierend auf dem VideoschnittModulTemplate, wobei `IhrModulname` der Name Ihres Moduls ist. Die resultierende Verzeichnisstruktur sieht beispielhaft wie folgt aus:
 
 ```text
-working-directory/
-└── src/
-    └── Kurmann.Videoschnitt.Projektname
-    └── Kurmann.Videoschnitt.Projektname.Application
+Projektname/
+├── .template.config/
+├── Application/
+│   ├── Application.csproj
+│   └── Program.cs
+├── Module/
+│   ├── Commands/
+│   ├── Queries/
+│   ├── Services/
+│   ├── Module.csproj
+│   ├── ModuleSettings.cs
+│   └── ServiceCollection.cs
+└── Projektname.sln
 ```
 
-### SCI Module GitHub Workflow
+Dies spiegelt die modulare Trennung zwischen der Anwendungsebene und dem eigentlichen Modul wider, wobei `Commands`, `Queries` und `Services` jeweils für die Anwendung und das Modul dedizierte Verzeichnisse haben. Das Projekt wird durch eine Solution-Datei (`Projektname.sln`) an der Wurzel organisiert, die es ermöglicht, sowohl das Anwendungs- als auch das Modulprojekt in Entwicklungsumgebungen wie Visual Studio zu laden und zu verwalten.
 
-Kurzname: **scimodule-github-workflow**
+Bei der Erstellung des Moduls mit dem `videoschnitt-module` Template wird also eine Struktur aufgebaut, die eine klare Trennung der Verantwortlichkeiten und eine saubere Organisation des Codes fördert.
 
-#### Features SCI GitHub Workflow
+### Videoschnitt Modul Workflow
 
-Das Template erzeugt eine GitHub Actions Workflow-Konfiguration (`YAML`-Datei), die für das Publizieren eines Service Collection Integrated Modules auf NuGet.org ausgelegt ist.
+Kurzname: **videoschnitt-module-wf**
 
-#### Anwendung SCI GitHub Workflow
+Das `VideoschnittModulWorkflowTemplate` automatisiert den Build- und Veröffentlichungsprozess eines Videoschnitt Moduls mittels GitHub Actions. Dieses Template erstellt eine Konfigurationsdatei für einen Workflow, der bei jedem Push oder Pull Request gegen den `main` Branch aktiviert wird.
+
+#### Features Videoschnitt Modul Workflow
+
+- **Automatisierte CI/CD-Pipeline**: Ausführung von Build- und Pack-Schritten bei jedem Push oder Pull Request.
+- **.NET Core Setup**: Einrichtung einer spezifischen .NET-Version.
+- **Abhängigkeitsmanagement**: Stellt sicher, dass alle notwendigen Pakete vor dem Build-Vorgang wiederhergestellt werden.
+- **NuGet-Paketierung**: Packt das Modul in ein NuGet-Paket, bereit zur Veröffentlichung.
+- **NuGet-Veröffentlichung**: Veröffentlicht das Paket und zugehörige Symbolpakete auf NuGet.org unter Verwendung eines API-Keys.
+
+#### Anwendung Videoschnitt Modul Workflow
+
+Die Einrichtung der CI/CD-Pipeline erfolgt durch den folgenden Befehl:
 
 ```bash
-dotnet new scimodule-github-workflow -o .
+dotnet new videoschnitt-module-wf -o .
 ```
 
-erzeugt folgende Verzeichnisstruktur im Arbeitsverzeichnis
+Nach Ausführung dieses Befehls wird eine Workflow-Konfigurationsdatei im `.github/workflows`-Verzeichnis des Projekts erstellt. Die YAML-Datei könnte beispielsweise `dotnet-ci-cd.yml` heißen und enthält die Workflow-Definitionen, die Ihrem angegebenen Prozess entsprechen.
 
-```text
-working-directory/
-└── .github/
-    └── workflows/
-        └── dotnet.yml
+Die resultierende Datei sieht dann wie folgt aus:
+
+```yaml
+name: .NET CI/CD
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build_and_pack:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '8.0.x'
+        
+    - name: Restore dependencies for Module
+      run: dotnet restore src/Entities/Entities.csproj
+
+    - name: Pack Entities
+      run: dotnet pack src/Entities/Entities.csproj --output ./nupkgs
+
+    # Veröffentlichen der NuGet-Pakete
+    - name: Push NuGet and Symbol Packages
+      run: |
+        dotnet nuget push ./nupkgs/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
+        dotnet nuget push ./nupkgs/*.snupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
 ```
 
-Hinweis: Die **Namensgebung des Projektes** mit `-n` Parameter hat keinen Einfluss auf die YAML-Datei und kann somit **verzichtet** werden.
+Diese Workflow-Datei stellt sicher, dass Ihr Modul immer gebaut, verpackt und optional veröffentlicht wird, sobald Änderungen im `main`-Zweig gepusht oder Pull Requests eingereicht werden. Sie garantiert eine konsistente Build-Umgebung und eine verlässliche Bereitstellung der Module.
 
-### SCI Module Visual Studio Code Debug Configuration
+### Videoschnitt Modul Debug Konfiguration
 
-Kurzname: **scimodule-vscode-debugconfig**
+Kurzname: **videoschnitt-module-debug**
 
-#### Features SCI Module VS Code Config
+Das `VideoschnittModulDebugTemplate` ist eine essentielle Hilfe für Entwickler, um schnell eine funktionierende Debug-Umgebung in Visual Studio Code für das Videoschnitt Modul einzurichten. Es generiert die `launch.json` und `tasks.json`, die für das Ausführen und Debuggen des Moduls in Visual Studio Code nötig sind.
 
-Dieses Modul bietet eine vordefinierte Debug-Konfiguration für die Entwicklung eines Service Collection Integrated Modules in Visual Studio Code. Es umfasst sowohl `launch.json` als auch `tasks.json`, um das Debuggen und Ausführen von Aufgaben innerhalb der VSCode-Umgebung zu erleichtern.
+#### Features Videoschnitt Modul Debug
 
-#### Anwendung SCI Module VS Code Config
+- **Angepasste .NET Core Launch Konfiguration**: Ermöglicht das Debuggen der Anwendung mit detaillierten Einstellungen.
+- **Vorkonfigurierte Build- und Watch-Tasks**: Unterstützt die Entwicklung mit Aufgaben zum Bauen und Beobachten des Projekts in Echtzeit.
+- **Einfache Integration in den Workflow**: Durch die Voreinstellungen kann sofort mit dem Debuggen begonnen werden, ohne zusätzliche Konfigurationen vornehmen zu müssen.
+
+#### Anwendung Videoschnitt Modul Debug
+
+Nach Erstellung des Videoschnitt Moduls können Sie die Debug-Konfiguration hinzufügen:
 
 ```bash
-dotnet new scimodule-vscode-debugconfig -n Projektname -o .
+dotnet new videoschnitt-module-debug -n IhrModulname -o .
 ```
 
-erzeugt folgende Verzeichnisstruktur im Arbeitsverzeichnis
+Dieser Befehl platziert die entsprechenden Dateien in einem `.vscode`-Verzeichnis an der Wurzel des Projekts. Die resultierenden Dateien `launch.json` und `tasks.json` werden auf Ihr spezifisches Modul zugeschnitten sein.
 
-```text
-scimodule-vscode-debugconfig/
-└── .vscode/
-    └── launch.json
-    └── tasks.json
-```
-
-### Entity Library Template
-
-Kurzname: **entitylib**
-
-Das `Entity Library Template` wurde entwickelt, um die Erstellung von Class-Libraries für die Domänenlogik in .NET-Projekten zu vereinfachen. Durch die Verwendung der C# Functional Extensions Library als `Result`-Typ, fördert dieses Template einen funktionalen Programmieransatz und verbessert die Handhabung von Operationsergebnissen.
-
-#### Features Entity Library
-
-- **C# Functional Extensions**: Verwendet die C# Functional Extensions Library, um `Result`-Typen für die Rückgabe von Operationsergebnissen zu ermöglichen.
-- **Fokussiert auf Domänenlogik**: Ideal für die Entwicklung von Bibliotheken, die Geschäftslogik und Domänenmodelle enthalten.
-- **Test-Projekt Integration**: Erstellt automatisch ein zugehöriges Test-Projekt, um die Qualität und Funktionalität der Domänenlogik sicherzustellen.
-- **.NET Class-Library Basis**: Bietet eine solide Grundlage für die Entwicklung von wiederverwendbaren .NET Class-Libraries.
-- **Modularer Aufbau**: Fördert die Entwicklung von sauber strukturierten, modularen und wartbaren Code-Basen.
-- **Namespace-Unterstützung**: Passt sich nahtlos an den Stammnamespace `Kurmann.Videoschnitt` an und gewährleistet eine konsistente Namensgebung.
-
-#### Anwendung Entity Library
-
-```bash
-dotnet new entitylib -n EntityLibName -o src
-```
-
-ergibt eine Class-Library im "src"-Verzeichnis mit den .NET-Projekten
-
-```text
-working-directory/
-└── src/
-    └── Kurmann.Videoschnitt.EntityLibName
-    └── Kurmann.Videoschnitt.EntityLibName.Tests
-```
-
-Dieses Setup ist optimal für Entwickler, die sich auf die Implementierung von Domänenlogik mit einem klaren Fokus auf funktionale Programmierprinzipien und testgetriebene Entwicklung konzentrieren möchten.
-
-### Entity Library GitHub Workflow
-
-Kurzname: **entitylib-github-workflow**
-
-Das `Entity Library GitHub Workflow` Template erweitert die Sammlung von .NET Templates um eine automatisierte CI/CD Pipeline speziell für die `Entity Library`. Es generiert eine GitHub Actions Workflow-Konfiguration, die spezifisch für das Bauen, Testen und optional das Veröffentlichen einer .NET Class-Library, welche die Domänenlogik beinhaltet, auf NuGet.org ausgelegt ist.
-
-#### Features Entity Library GitHub Workflow
-
-- **Automatisierte CI/CD Pipeline**: Konfiguriert GitHub Actions für das automatische Bauen und Testen der Entity Library bei jedem Push oder Pull Request.
-- **NuGet-Veröffentlichung**: Ermöglicht die automatische Veröffentlichung der gebauten Library auf NuGet.org, abhängig von spezifischen Triggern oder Tags.
-- **Angepasste Workflow-Events**: Unterstützt verschiedene GitHub Event-Typen wie `push`, `pull_request` oder manuell ausgelöste Workflows.
-- **Testautomatisierung**: Führt automatisch alle definierten Unit- und Integrationstests als Teil des CI-Prozesses aus.
-- **Flexibilität und Anpassbarkeit**: Ermöglicht einfache Anpassungen der Workflow-Schritte, um spezifische Anforderungen oder Projektkonfigurationen zu berücksichtigen.
-
-#### Anwendung Entity Library GitHub Workflow
-
-```bash
-dotnet new entitylib-github-workflow -o .
-```
-
-erzeugt folgende Verzeichnisstruktur im Arbeitsverzeichnis
-
-```text
-working-directory/
-└── .github/
-    └── workflows/
-        └── entitylib-ci-cd.yml
-```
-
-Die Konfigurationsdatei `entitylib-ci-cd.yml` ist so voreingestellt, dass sie die Entity Library bei jedem `push` auf den `main`-Zweig oder bei jedem `pull_request` gegen den `main`-Zweig baut und testet. Optional kann die Konfiguration so erweitert werden, dass erfolgreiche Builds automatisch auf NuGet.org veröffentlicht werden, sobald ein neuer Release-Tag gepusht wird.
-
-Dieses Template ist eine essenzielle Erweiterung für Teams, die die Entity Library in ihre Entwicklungspipeline integrieren möchten, um eine kontinuierliche Qualitätssicherung und -verbesserung der Domänenlogik zu gewährleisten.
-
-## Empfehlungen
-
-### NuGet API Key
-
-Um die automatische Veröffentlichung Ihrer NuGet-Pakete über die GitHub Actions Workflow zu ermöglichen, ist es notwendig, den `NUGET_API_KEY` in den GitHub Secrets jedes Repositories zu hinterlegen. Dieser API-Key ermöglicht es GitHub Actions, die Pakete in Ihrem Namen auf NuGet.org zu veröffentlichen. Sie können den API-Key von Ihrem NuGet.org-Konto erhalten und sollten diesen sicher im Abschnitt Settings > Secrets > Actions Ihres GitHub-Repositories speichern. Durch das Setzen dieses Secrets stellen Sie sicher, dass Ihre CI/CD Pipeline die Pakete erfolgreich auf NuGet.org pushen kann, ohne Ihren API-Key offenlegen zu müssen.
-
-### Komplette Erstellung eines SCI Modul Repository
-
-Zum Erstellen eines kompletten Service Collection Integrated Moduls mitsamt Repository-Struktur wird die kombination der Templates `scimodule`, `scimodule-github-workflow` und `scimodule-vscode-debugconfig` empfohlen.
-
-Bitte vorher zum **Wurzelverzeichnis** des neu erstellte GitHub-**Repositorys** wechseln.
-
-Erstellt ein Service Collection Integrated Modul um "src"-Verzeichnis und erzeugt eine passende GitHub Actions Workflow-Konfiguration und eine passende vordefinierte Debug-Konfiguration für Visual Studio Code.
-
-```bash
-export PROJEKTNAME="MeinProjekt"
-dotnet new scimodule -n $PROJEKTNAME -o src
-dotnet new scimodule-github-workflow -o .
-dotnet new scimodule-vscode-debugconfig -n $PROJEKTNAME -o .
-
-```
-
-### Konfiguration von Modulen
-
-Wenn Sie ein Modul über unser .NET-Template erstellen, wird die Konfiguration des Moduls durch eine dedizierte Sektion in der Konfigurationsdatei ermöglicht. Diese Sektion ist nach dem Muster `Kurmann.Videoschnitt.YourModuleName` benannt, wobei `YourModuleName` der Name Ihres spezifischen Moduls ist. 
-
-#### Anpassung der Moduleinstellungen
-
-Innerhalb jeder Modul-Konfigurationssektion können Sie die `ModuleSettings`-Klasse anpassen, um verschiedene Konfigurationswerte zu definieren. Diese Werte können Sie dann einfach in der `appsettings.json` oder durch Umgebungsvariablen konfigurieren.
-
-#### Beispiel
-
-Für ein Modul namens `VideoEditor` würden Sie eine Sektion `Kurmann.Videoschnitt.VideoEditor` in Ihrer `appsettings.json` hinzufügen:
+Die `launch.json` Datei könnte so aussehen:
 
 ```json
 {
-  "Kurmann.Videoschnitt.VideoEditor": {
-    "OutputPath": "/path/to/output"
-  }
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": ".NET Core Launch (console)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/src/Application/bin/Debug/net8.0/Kurmann.Videoschnitt.ModuleName.Application.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+            "console": "internalConsole",
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            }
+        }
+    ]
 }
 ```
 
-Anschließend passen Sie die `ModuleSettings`-Klasse in Ihrem Modul an, um den `OutputPath` als Konfigurationseinstellung zu definieren:
+Und die `tasks.json` Datei stellt die notwendigen Aufgaben für den Build und das Watchen des Projekts bereit:
 
-```csharp
-public class ModuleSettings
+```json
 {
-    public string OutputPath { get; set; } = "Standardwert";
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/src/Application/Application.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary;ForceNoAlign"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "publish",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "${workspaceFolder}/src/Application/Application.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary;ForceNoAlign"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "watch",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "watch",
+                "run",
+                "--project",
+                "${workspaceFolder}/src/Application/Application.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        }
+    ]
 }
 ```
 
-#### Nutzung in Ihrer Anwendung
+Mit dieser Konfiguration können Entwickler direkt in Visual Studio Code das Projekt bauen, veröffentlichen und in Echtzeit Veränderungen beobachten, was den Entwicklungsprozess erheblich vereinfacht und beschleunigt.
 
-Durch die Anwendung des `IOptions`-Patterns können Sie diese Konfigurationswerte leicht in Ihrem Modul abrufen und verwenden. Dies bietet Ihnen eine flexible und starke Typisierung für die Verwaltung von Konfigurationseinstellungen.
+### Videoschnitt Entity Library
 
-#### Vorteile
+Kurzname: **videoschnitt-entitylib**
 
-- **Flexibilität:** Jedes Modul kann unabhängig konfiguriert werden, was die Anpassung und Erweiterung erleichtert.
-- **Einfachheit:** Die Verwendung der `ModuleSettings`-Klasse zusammen mit dem `IOptions`-Pattern macht den Zugriff auf Konfigurationswerte klar und einfach.
-- **Anpassbarkeit:** Sie können Konfigurationswerte leicht ändern, ohne den Code des Moduls anpassen zu müssen, sei es durch Bearbeitung der `appsettings.json` oder Setzen von Umgebungsvariablen.
+Das `VideoschnittEntityLibraryTemplate` ist speziell dafür entworfen worden, um die schnelle Erstellung von Class-Libraries zu unterstützen, die die Domänenlogik innerhalb des Videoschnitt Projekts repräsentieren. Es fördert einen funktionalen Ansatz durch die Verwendung der C# Functional Extensions Library und verbessert dadurch die Handhabung von Operationsergebnissen.
 
-Diese Struktur ermöglicht es Ihnen, Ihre Anwendung modular und flexibel zu gestalten, mit klaren und einfachen Konfigurationsmechanismen für jedes Modul.
+#### Features Videoschnitt Entity Library
+
+- **C# Functional Extensions Nutzung**: Ermöglicht die Verwendung von erweiterten funktionalen Konzepten und Mustern, wie z.B. `Result<T>`.
+- **Fokussierung auf Domänenlogik**: Ideal für die Entwicklung von Bibliotheken, die Geschäftslogik und Domänenmodelle enthalten.
+- **Testprojekt Integration**: Generiert automatisch ein Testprojekt zur Sicherstellung der Qualität und Funktionalität der Domänenlogik.
+- **.NET Class-Library Basis**: Bietet eine solide Grundlage und ein konsistentes Layout für .NET Class-Libraries.
+- **Modularer Aufbau**: Unterstützt die Schaffung einer sauber strukturierten, modularen Codebasis.
+- **Namespace-Konformität**: Gewährleistet eine konsistente Verwendung des `Kurmann.Videoschnitt` Stammbereichs für die Namensgebung.
+
+#### Anwendung Videoschnitt Entity Library
+
+Um die Entity Library zu erstellen, nutzen Sie den folgenden Befehl:
+
+```bash
+dotnet new videoschnitt-entitylib -n EntityLibName -o src
+```
+
+Daraufhin wird eine neue Class-Library im `src`-Verzeichnis erzeugt. Die resultierende Verzeichnisstruktur sowie die .csproj- und Code-Dateien sind speziell für die Anforderungen von Entitäten innerhalb des Videoschnitt Projekts ausgerichtet.
+
+Auf Basis der bereitgestellten Struktur für das Entity Library Template und unter Anwendung des neuen Namensschemas wird die Verzeichnisstruktur wie folgt aussehen:
+
+```text
+EntityLibName/
+├── .template.config/
+├── Entities/
+│   ├── Entities.csproj
+│   └── SampleEntity.cs
+├── Tests/
+│   ├── GlobalUsings.cs
+│   ├── SampleEntityTest.cs
+│   └── Tests.csproj
+└── EntityLibName.sln
+```
+
+Innerhalb des `Entities/`-Ordners finden Sie das Projekt für die Bibliothek, das die Entitätsklassen enthält, in diesem Fall repräsentiert durch `SampleEntity.cs`. Die `Tests/`-Ordnerstruktur ist für das zugehörige Testprojekt vorgesehen, wobei `SampleEntityTest.cs` als ein Beispiel für einen Unit-Test dient. 
+
+`GlobalUsings.cs` in der Teststruktur könnte dazu verwendet werden, global verfügbare `using`-Direktiven für das gesamte Testprojekt zu definieren, um die Notwendigkeit wiederholter Direktiven in jedem Test zu vermeiden.
+
+`EntityLibName.sln` ist die zugehörige Solution-Datei, welche beide Projekte (die Entitätsbibliothek und das Testprojekt) für eine einfachere Verwaltung in Entwicklungs-Tools wie Visual Studio zusammenfasst.
+
+Diese Konfiguration gewährleistet eine klare Trennung zwischen der Implementierung der Geschäftslogik und den Tests, was für eine saubere Codebasis und leichtere Wartbarkeit sorgt.
+
+### Videoschnitt Entity Library GitHub Workflow
+
+Kurzname: **videoschnitt-entitylib-wf**
+
+Das `VideoschnittEntityLibraryWorkflowTemplate` schafft eine CI/CD-Pipeline mittels GitHub Actions für das automatische Bauen, Testen und Veröffentlichen von Entity Libraries des Videoschnitt Projekts auf NuGet.org.
+
+#### Features Videoschnitt Entity Library GitHub Workflow
+
+- **Automatisierte CI/CD-Pipeline**: Konfiguriert GitHub Actions für die Automatisierung des Build- und Pack-Prozesses.
+- **.NET Core Setup**: Einrichtung und Verwendung einer spezifischen .NET-Version für den Build-Prozess.
+- **Abhängigkeitsmanagement**: Wiederherstellung der benötigten Pakete vor dem Build.
+- **NuGet-Paketierung**: Erstellt NuGet-Pakete aus dem Class-Library-Projekt.
+- **NuGet-Veröffentlichung**: Stellt die erstellten Pakete auf NuGet.org bereit und verwendet dabei GitHub Secrets, um den NuGet API-Key sicher zu handhaben.
+
+#### Anwendung Videoschnitt Entity Library GitHub Workflow
+
+Die Einrichtung der CI/CD-Pipeline für die Entity Library erfolgt durch den folgenden Befehl:
+
+```bash
+dotnet new videoschnitt-entitylib-wf -o .
+```
+
+Durch diesen Befehl wird eine `dotnet.yml` Workflow-Datei im `.github/workflows`-Verzeichnis des Projekts erstellt, die folgende Schritte für den CI/CD-Prozess vorsieht:
+
+```yaml
+name: .NET CI/CD
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build_and_pack:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '8.0.x'
+        
+    - name: Restore dependencies for Module
+      run: dotnet restore src/Entities/Entities.csproj
+
+    - name: Pack Entities
+      run: dotnet pack src/Entities/Entities.csproj --output ./nupkgs
+
+    # Veröffentlichen der NuGet-Pakete
+    - name: Push NuGet and Symbol Packages
+      run: |
+        dotnet nuget push ./nupkgs/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
+        dotnet nuget push ./nupkgs/*.snupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
+```
+
+Diese Konfiguration sorgt dafür, dass Ihre Entity Library automatisch gebaut und verpackt wird, und bei Bedarf – wenn zum Beispiel ein Tag gepusht wird – auf NuGet.org veröffentlicht wird. Durch den Einsatz von `--skip-duplicate` wird verhindert, dass bereits existierende Paketversionen zu Konflikten führen.
+
+Die CI/CD-Pipeline ist ein wichtiger Bestandteil moderner Softwareentwicklungsprozesse und stellt sicher, dass Ihre Bibliothek immer nach den neuesten Änderungen neu gebaut, getestet und veröffentlicht wird.
+
+## Empfehlungen
+
+Für eine effiziente Nutzung der Videoschnitt Templates und zur Sicherstellung eines reibungslosen Entwicklungsprozesses sind folgende Praktiken ratsam:
+
+### NuGet API-Key Verwaltung
+
+Es ist entscheidend, den `NUGET_API_KEY` sicher in den GitHub Secrets des Repositories zu speichern, um die Automatisierung der Paketveröffentlichung auf NuGet.org zu ermöglichen. Dieser Schlüssel sollte niemals öffentlich gemacht werden und kann vertraulich über `Settings > Secrets > Actions` im Repository hinterlegt werden.
+
+### Strukturierte Modulerstellung
+
+Die kombinierte Verwendung der Templates `scimodule`, `scimodule-github-workflow` und `scimodule-vscode-debugconfig` wird empfohlen, um eine kohärente Entwicklungsumgebung zu etablieren. Die Konfiguration der Module sollte durch dedizierte Abschnitte in der `appsettings.json` erfolgen, was die Flexibilität bei der Verwaltung der Konfigurationseinstellungen erhöht.
+
+### Modulkonfiguration
+
+Durch die Anwendung des `IOptions`-Patterns lässt sich eine klare und einfache Handhabung der Konfigurationswerte erreichen. Die `ModuleSettings`-Klasse dient dabei als Basis für die Konfiguration und ermöglicht eine einfache Anpassung und Erweiterung.
+
+## Lizenz
+
+Dieses Projekt steht unter der Apache 2.0 Lizenz. Details finden Sie in der [LICENSE](LICENSE) Datei.
+
+## Mitwirken
+
+Während eine aktive Beteiligung nicht erwartet wird, sind Interessierte, die zum Projekt beitragen möchten, herzlich eingeladen, sich bei mir zu melden.
