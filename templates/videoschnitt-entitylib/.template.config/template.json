@@ -7,10 +7,10 @@
     "ClassLibrary"
   ],
   "identity": "Kurmann.Videoschnitt.EntityLib",
-  "name": "Entity Library",
-  "shortName": "entitylib",
+  "name": "Videoschnitt Entity Library",
+  "shortName": "videoschnitt-entitylib",
   "sourceName": "EntityLib",
-  "description": ".NET Class-Library template for domain logic with an associated test project, using C# Functional Extensions for Result types.",
+  "description": "A .NET Class-Library template for domain logic with an associated test project, using C# Functional Extensions for Result types for the Kurmann.Videoschnitt namespace.",
   "tags": {
     "language": "C#",
     "type": "solution"
