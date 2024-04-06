@@ -56,9 +56,6 @@ Dieser Befehl generiert eine neue Modulstruktur im Verzeichnis `src` basierend a
 Projektname/
 ├── .template.config/
 ├── Application/
-│   ├── Commands/
-│   ├── Queries/
-│   ├── Services/
 │   ├── Application.csproj
 │   └── Program.cs
 ├── Module/
