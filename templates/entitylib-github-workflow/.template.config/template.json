@@ -2,8 +2,9 @@
   "$schema": "http://json.schemastore.org/template",
   "author": "Patrick Kurmann",
   "classifications": [
-    "Common",
-    "GitHubActions"
+    "Kurmann",
+    "Videoschnitt",
+    "GitHub"
   ],
   "identity": "Kurmann.Videoschnitt.EntityLib.GitHubWorkfow",
   "name": "Entity Library GitHub Workflow",
