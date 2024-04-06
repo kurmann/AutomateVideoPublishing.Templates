@@ -20,10 +20,6 @@ jobs:
         
     - name: Restore dependencies for Module
       run: dotnet restore src/Module/Module.csproj
-    
-    # Optional: Ausführen der Tests
-    # - name: Test
-    #   run: dotnet test src/Tests/Tests.csproj --no-build --verbosity normal
 
     - name: Pack Module
       run: dotnet pack src/Module/Module.csproj --output ./nupkgs
