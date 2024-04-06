@@ -12,8 +12,8 @@
 
     <!-- Die Version sollte mit jeder Veröffentlichung auf Nuget.org erhöht werden. Die Release Notes dürfen Umbrüche 
     enthalten, jedoch keine spezifischen Markdown-Formatierungen wie fett oder kursiv oder Überschriften -->
-    <PackageVersion>1.10.0</PackageVersion>
-    <PackageReleaseNotes>Veröffentlichung als stabile Version 1.10.0.
+    <PackageVersion>1.11.0-beta</PackageVersion>
+    <PackageReleaseNotes>Umbenennung aller Vorlagen mit Fokus auf "Kurmann.Videoschnitt". Einheitliche Namensgebung.
     </PackageReleaseNotes>
 
     <PackageReadmeFile>README.md</PackageReadmeFile>
