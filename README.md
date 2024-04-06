@@ -340,3 +340,27 @@ jobs:
 Diese Konfiguration sorgt dafür, dass Ihre Entity Library automatisch gebaut und verpackt wird, und bei Bedarf – wenn zum Beispiel ein Tag gepusht wird – auf NuGet.org veröffentlicht wird. Durch den Einsatz von `--skip-duplicate` wird verhindert, dass bereits existierende Paketversionen zu Konflikten führen.
 
 Die CI/CD-Pipeline ist ein wichtiger Bestandteil moderner Softwareentwicklungsprozesse und stellt sicher, dass Ihre Bibliothek immer nach den neuesten Änderungen neu gebaut, getestet und veröffentlicht wird.
+
+## Empfehlungen
+
+Für eine effiziente Nutzung der Videoschnitt Templates und zur Sicherstellung eines reibungslosen Entwicklungsprozesses sind folgende Praktiken ratsam:
+
+### NuGet API-Key Verwaltung
+
+Es ist entscheidend, den `NUGET_API_KEY` sicher in den GitHub Secrets des Repositories zu speichern, um die Automatisierung der Paketveröffentlichung auf NuGet.org zu ermöglichen. Dieser Schlüssel sollte niemals öffentlich gemacht werden und kann vertraulich über `Settings > Secrets > Actions` im Repository hinterlegt werden.
+
+### Strukturierte Modulerstellung
+
+Die kombinierte Verwendung der Templates `scimodule`, `scimodule-github-workflow` und `scimodule-vscode-debugconfig` wird empfohlen, um eine kohärente Entwicklungsumgebung zu etablieren. Die Konfiguration der Module sollte durch dedizierte Abschnitte in der `appsettings.json` erfolgen, was die Flexibilität bei der Verwaltung der Konfigurationseinstellungen erhöht.
+
+### Modulkonfiguration
+
+Durch die Anwendung des `IOptions`-Patterns lässt sich eine klare und einfache Handhabung der Konfigurationswerte erreichen. Die `ModuleSettings`-Klasse dient dabei als Basis für die Konfiguration und ermöglicht eine einfache Anpassung und Erweiterung.
+
+## Lizenz
+
+Dieses Projekt steht unter der Apache 2.0 Lizenz. Details finden Sie in der [LICENSE](LICENSE) Datei.
+
+## Mitwirken
+
+Während eine aktive Beteiligung nicht erwartet wird, sind Interessierte, die zum Projekt beitragen möchten, herzlich eingeladen, sich bei mir zu melden.
