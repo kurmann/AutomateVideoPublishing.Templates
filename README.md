@@ -23,3 +23,54 @@ dotnet new [TemplateShortName] -n Projektname
 Dabei ist `[TemplateShortName]` durch den Kurznamen des Templates zu ersetzen, das Sie verwenden möchten, und `Projektname` durch den gewünschten Namen Ihres Projekts. Dieser Prozess initialisiert ein neues Projektverzeichnis, das auf der Struktur und den Voreinstellungen des ausgewählten Templates basiert.
 
 Die Anwendung der Videoschnitt Templates ermöglicht es Ihnen, schnell mit der Entwicklung zu beginnen, indem sie eine vordefinierte Projektstruktur und Konfiguration bieten, die speziell auf die Anforderungen und Best Practices des Videoschnitt Projekts abgestimmt sind.
+
+## Templates
+
+### Videoschnitt Modul
+
+Kurzname: **videoschnitt-module**
+
+Das `VideoschnittModulTemplate` ist ein fundamentales Template dieser Sammlung, entworfen für die Erstellung von Modulen, die sich nahtlos in die .NET Core und ASP.NET Core Anwendungen einfügen. Diese Module können leicht mit der `IServiceCollection` für Dependency Injection integriert werden und legen einen starken Fokus auf Modularität, Event-Driven Design sowie klare Operationsergebnis-Typen.
+
+#### Features Videoschnitt Modul
+
+- **IServiceCollection Integration**: Vereinfacht die Registrierung von Diensten und deren Abhängigkeiten, was die Verwendung von Dependency Injection innerhalb des Moduls erleichtert.
+- **Modulare Architektur**: Fördert die Entwicklung von klar definierten, unabhängigen Modulen, die sich durch hohe Kohäsion und lose Kopplung auszeichnen.
+- **Event-Driven Design**: Unterstützt die Implementierung von Event-basierten Kommunikationsmustern zwischen den Komponenten des Moduls, um eine flexible und erweiterbare Architektur zu fördern.
+- **Operationsergebnis-Typen**: Verwendung von `Result<T>` und ähnlichen Mustern für die explizite Handhabung von Erfolgs- und Fehlerfällen in Geschäftslogikoperationen.
+- **Einfache Integration**: Entwickelt für die mühelose Eingliederung in bestehende Host-Anwendungen, was die Wiederverwendbarkeit und Skalierbarkeit von Modulen verbessert.
+- **Namespace-Unterstützung**: Verwendet den Stammnamespace `Kurmann.Videoschnitt` und gewährleistet eine konsistente und klare Organisationsstruktur des Codes.
+- **Konfigurationsmodell**: Vollständige Unterstützung des .NET `IOptions`-Pattern, einschließlich der Integration von .NET User Secrets für eine sichere und flexible Konfiguration.
+
+#### Anwendung Videoschnitt Modul
+
+Um ein neues Videoschnitt Modul zu erstellen, verwenden Sie den folgenden Befehl in Ihrem Terminal oder Command Prompt:
+
+```bash
+dotnet new videoschnitt-module -n IhrModulname -o src
+```
+
+Dieser Befehl generiert eine neue Modulstruktur im Verzeichnis `src` basierend auf dem VideoschnittModulTemplate, wobei `IhrModulname` der Name Ihres Moduls ist. Die resultierende Verzeichnisstruktur sieht beispielhaft wie folgt aus:
+
+```text
+Projektname/
+├── .template.config/
+├── Application/
+│   ├── Commands/
+│   ├── Queries/
+│   ├── Services/
+│   ├── Application.csproj
+│   └── Program.cs
+├── Module/
+│   ├── Commands/
+│   ├── Queries/
+│   ├── Services/
+│   ├── Module.csproj
+│   ├── ModuleSettings.cs
+│   └── ServiceCollection.cs
+└── Projektname.sln
+```
+
+Dies spiegelt die modulare Trennung zwischen der Anwendungsebene und dem eigentlichen Modul wider, wobei `Commands`, `Queries` und `Services` jeweils für die Anwendung und das Modul dedizierte Verzeichnisse haben. Das Projekt wird durch eine Solution-Datei (`Projektname.sln`) an der Wurzel organisiert, die es ermöglicht, sowohl das Anwendungs- als auch das Modulprojekt in Entwicklungsumgebungen wie Visual Studio zu laden und zu verwalten.
+
+Bei der Erstellung des Moduls mit dem `videoschnitt-module` Template wird also eine Struktur aufgebaut, die eine klare Trennung der Verantwortlichkeiten und eine saubere Organisation des Codes fördert.
