@@ -6,10 +6,10 @@
     "Videoschnitt",
     "ServiceCollection"
   ],
-  "identity": "Kurmann.Videoschnitt.ServiceCollectionIntegratedModule",
-  "name": "SCI Module",
-  "shortName": "scimodule",
-  "sourceName": "ServiceCollectionIntegratedModule",
+  "identity": "Kurmann.Videoschnitt.Module",
+  "name": "Videoschnitt Module",
+  "shortName": "videoschnitt-module",
+  "sourceName": "ModuleName",
   "description": "Module with Application, Entities, Module and Test project for the Videoschnitt modular monolith architecture.",
   "tags": {
     "language": "C#",

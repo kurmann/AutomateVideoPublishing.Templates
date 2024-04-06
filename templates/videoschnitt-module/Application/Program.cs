@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 
-namespace Kurmann.Videoschnitt.ServiceCollectionIntegratedModule.Application;
+namespace Kurmann.Videoschnitt.ModuleName.Application;
 
 internal class Program
 {
@@ -21,7 +21,7 @@ internal class Program
             })
             .ConfigureServices((hostContext, services) =>
             {
-                services.AddServiceCollectionIntegratedModule(hostContext.Configuration);
+                services.AddModuleName(hostContext.Configuration);
             });
     }
 }

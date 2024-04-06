@@ -1,12 +1,12 @@
 using Microsoft.Extensions.DependencyInjection;
-using Kurmann.Videoschnitt.ServiceCollectionIntegratedModule.Services;
+using Kurmann.Videoschnitt.ModuleName.Services;
 using Microsoft.Extensions.Configuration;
 
-namespace Kurmann.Videoschnitt.ServiceCollectionIntegratedModule;
+namespace Kurmann.Videoschnitt.ModuleName;
 
 public static class ServiceCollectionExtensions
 {
-    public static IServiceCollection AddServiceCollectionIntegratedModule(
+    public static IServiceCollection AddModuleName(
         this IServiceCollection services,
         IConfiguration configuration)
     {

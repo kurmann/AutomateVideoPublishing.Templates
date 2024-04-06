@@ -6,8 +6,8 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <RootNamespace>Kurmann.Videoschnitt.ServiceCollectionIntegratedModule.Application.</RootNamespace>
-    <AssemblyName>Kurmann.Videoschnitt.ServiceCollectionIntegratedModule.Application</AssemblyName>
+    <RootNamespace>Kurmann.Videoschnitt.ModuleName.Application.</RootNamespace>
+    <AssemblyName>Kurmann.Videoschnitt.ModuleName.Application</AssemblyName>
     <IsPackable>false</IsPackable>
     <Version>1.0.0</Version>
   </PropertyGroup>

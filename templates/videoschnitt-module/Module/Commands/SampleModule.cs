@@ -1,6 +1,6 @@
 ﻿using CSharpFunctionalExtensions;
 
-namespace Kurmann.Videoschnitt.ServiceCollectionIntegratedModule.Commands;
+namespace Kurmann.Videoschnitt.ModuleName.Commands;
 
 public class SampleCommand(string? sampleParameter) : ICommand<SampleCommandResult>
 {
