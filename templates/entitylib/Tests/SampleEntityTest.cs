@@ -1,6 +1,4 @@
-using Kurmann.Videoschnitt.EntityLib;
-
-namespace Kurmann.Videoschnitt.EntityLib.Tests.Entities;
+namespace Kurmann.Videoschnitt.EntityLib.Tests;
 
 [TestClass]
 public class SampleEntityTest
