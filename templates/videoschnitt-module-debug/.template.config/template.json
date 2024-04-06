@@ -6,11 +6,11 @@
     "Videoschnitt",
     "Debug"
   ],
-  "identity": "Kurmann.Videoschnitt.SciModule.VsCode.DebugConfig",
-  "name": "SCI Module VS Code Debug Config",
-  "shortName": "scimodule-vscode-debugconfig",
-  "sourceName": "SciModule.VsCode.DebugConfig",
-  "description": "This template creates the Visual Studio Code debug configuration for the Service Collection Integrated Module.",
+  "identity": "Kurmann.Videoschnitt.Module.Debug",
+  "name": "Videoschnitt Module VS Code Debug Config",
+  "shortName": "videoschnitt-module-debug",
+  "sourceName": "ModuleName",
+  "description": "This template creates the Visual Studio Code debug configuration for Kurmann Videoschnitt module.",
   "tags": {
     "language": "JSON",
     "type": "item"

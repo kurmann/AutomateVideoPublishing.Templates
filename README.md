@@ -167,7 +167,7 @@ Die `launch.json` Datei könnte so aussehen:
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/src/Application/bin/Debug/net8.0/Kurmann.Videoschnitt.SciModule.VsCode.DebugConfig.Application.dll",
+            "program": "${workspaceFolder}/src/Application/bin/Debug/net8.0/Kurmann.Videoschnitt.ModuleName.Application.dll",
             "args": [],
             "cwd": "${workspaceFolder}",
             "stopAtEntry": false,
