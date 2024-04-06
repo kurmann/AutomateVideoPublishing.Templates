@@ -230,3 +230,51 @@ Und die `tasks.json` Datei stellt die notwendigen Aufgaben für den Build und da
 ```
 
 Mit dieser Konfiguration können Entwickler direkt in Visual Studio Code das Projekt bauen, veröffentlichen und in Echtzeit Veränderungen beobachten, was den Entwicklungsprozess erheblich vereinfacht und beschleunigt.
+
+### Videoschnitt Entity Library
+
+Kurzname: **videoschnitt-entitylib**
+
+Das `VideoschnittEntityLibraryTemplate` ist speziell dafür entworfen worden, um die schnelle Erstellung von Class-Libraries zu unterstützen, die die Domänenlogik innerhalb des Videoschnitt Projekts repräsentieren. Es fördert einen funktionalen Ansatz durch die Verwendung der C# Functional Extensions Library und verbessert dadurch die Handhabung von Operationsergebnissen.
+
+#### Features Videoschnitt Entity Library
+
+- **C# Functional Extensions Nutzung**: Ermöglicht die Verwendung von erweiterten funktionalen Konzepten und Mustern, wie z.B. `Result<T>`.
+- **Fokussierung auf Domänenlogik**: Ideal für die Entwicklung von Bibliotheken, die Geschäftslogik und Domänenmodelle enthalten.
+- **Testprojekt Integration**: Generiert automatisch ein Testprojekt zur Sicherstellung der Qualität und Funktionalität der Domänenlogik.
+- **.NET Class-Library Basis**: Bietet eine solide Grundlage und ein konsistentes Layout für .NET Class-Libraries.
+- **Modularer Aufbau**: Unterstützt die Schaffung einer sauber strukturierten, modularen Codebasis.
+- **Namespace-Konformität**: Gewährleistet eine konsistente Verwendung des `Kurmann.Videoschnitt` Stammbereichs für die Namensgebung.
+
+#### Anwendung Videoschnitt Entity Library
+
+Um die Entity Library zu erstellen, nutzen Sie den folgenden Befehl:
+
+```bash
+dotnet new videoschnitt-entitylib -n EntityLibName -o src
+```
+
+Daraufhin wird eine neue Class-Library im `src`-Verzeichnis erzeugt. Die resultierende Verzeichnisstruktur sowie die .csproj- und Code-Dateien sind speziell für die Anforderungen von Entitäten innerhalb des Videoschnitt Projekts ausgerichtet.
+
+Auf Basis der bereitgestellten Struktur für das Entity Library Template und unter Anwendung des neuen Namensschemas wird die Verzeichnisstruktur wie folgt aussehen:
+
+```text
+EntityLibName/
+├── .template.config/
+├── Entities/
+│   ├── Entities.csproj
+│   └── SampleEntity.cs
+├── Tests/
+│   ├── GlobalUsings.cs
+│   ├── SampleEntityTest.cs
+│   └── Tests.csproj
+└── EntityLibName.sln
+```
+
+Innerhalb des `Entities/`-Ordners finden Sie das Projekt für die Bibliothek, das die Entitätsklassen enthält, in diesem Fall repräsentiert durch `SampleEntity.cs`. Die `Tests/`-Ordnerstruktur ist für das zugehörige Testprojekt vorgesehen, wobei `SampleEntityTest.cs` als ein Beispiel für einen Unit-Test dient. 
+
+`GlobalUsings.cs` in der Teststruktur könnte dazu verwendet werden, global verfügbare `using`-Direktiven für das gesamte Testprojekt zu definieren, um die Notwendigkeit wiederholter Direktiven in jedem Test zu vermeiden.
+
+`EntityLibName.sln` ist die zugehörige Solution-Datei, welche beide Projekte (die Entitätsbibliothek und das Testprojekt) für eine einfachere Verwaltung in Entwicklungs-Tools wie Visual Studio zusammenfasst.
+
+Diese Konfiguration gewährleistet eine klare Trennung zwischen der Implementierung der Geschäftslogik und den Tests, was für eine saubere Codebasis und leichtere Wartbarkeit sorgt.
