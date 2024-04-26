@@ -1,5 +1,7 @@
 # Videoschnitt Templates
 
+> Dieses Repository wurde archiviert am 26. April 2024 nachdem alle Templates in das `kurmann/Templates`-Repository überführt worden sind.
+
 Dieses Repository, "Videoschnitt Templates", ist eine Sammlung von benutzerdefinierten .NET Templates, die speziell darauf ausgelegt sind, die schnelle Entwicklung von Modulen und Anwendungen für das Videoschnitt Projekt zu erleichtern. Diese Templates dienen als strukturierte Grundlage für den Bau modularer, wartbarer und skalierbarer Lösungen, wobei sowohl .NET Core als auch ASP.NET Core Anwendungen unterstützt werden. Jedes Template wurde sorgfältig entworfen, um unseren Architekturprinzipien zu entsprechen und eine effiziente und konsistente Entwicklungserfahrung zu gewährleisten.
 
 ## Installation
